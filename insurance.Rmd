@@ -1,0 +1,61 @@
+---
+title: "Insurance"
+author: "Koki Ando"
+date: "3/15/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+devtools::install_github("")
+
+https://www.kaggle.com/mirichoi0218/insurance/data
+
+### Preparation
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(gganimate)
+library(data.table)
+library(plotly)
+
+insurance <- fread("https://s3-ap-southeast-2.amazonaws.com/koki25ando/insurance.csv", data.table = FALSE)
+insurance$smoker <- as.factor(insurance$smoker)
+```
+
+```{r}
+insurance %>% 
+  ggplot(aes(x=smoker, y = charges, fill = smoker, colour = smoker)) + 
+  geom_violin()
+```
+https://plot.ly/r/animations/ this site helped me a lot
+
+
+### Scatter plot
+
+```{r}
+insurance %>%
+  plot_ly(x = ~bmi, y = ~charges, color = ~smoker, size = ~children,
+          type = 'scatter', mode = 'markers', showlegend = F
+  )
+```
+
+#### Animation plot
+```{r}
+insurance %>%
+  plot_ly(x = ~bmi, y = ~charges, frame = ~age, 
+          type = 'scatter', mode = 'markers', showlegend = F
+          )
+```
+
+
+### Box plot
+```{r}
+insurance %>%
+  plot_ly(x = ~smoker, y = ~charges, frame = ~age, 
+          type = 'box')
+```
+
