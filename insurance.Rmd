@@ -1,23 +1,25 @@
 ---
-title: "Insurance"
+title: "Visualization and Analysis of Personal Medical Cost Dataset"
 author: "Koki Ando"
 date: "3/15/2018"
-output: html_document
+output:
+  html_document:
+    code_folding: show
+    highlight: tango
+    theme: cosmo
+    toc: yes
+    toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-devtools::install_github("")
-
-https://www.kaggle.com/mirichoi0218/insurance/data
-
-### Preparation
-
+## Preparation
+I found a interesting datase on kaggle [Medical Cost Personal Datasets
+](https://www.kaggle.com/mirichoi0218/insurance)
 ```{r}
 library(tidyverse)
-library(ggplot2)
 library(gganimate)
 library(data.table)
 library(plotly)
@@ -26,36 +28,51 @@ insurance <- fread("https://s3-ap-southeast-2.amazonaws.com/koki25ando/insurance
 insurance$smoker <- as.factor(insurance$smoker)
 ```
 
+## Visualization
+
+### Violin plot
 ```{r}
 insurance %>% 
   ggplot(aes(x=smoker, y = charges, fill = smoker, colour = smoker)) + 
   geom_violin()
 ```
-https://plot.ly/r/animations/ this site helped me a lot
-
 
 ### Scatter plot
 
 ```{r}
-insurance %>%
-  plot_ly(x = ~bmi, y = ~charges, color = ~smoker, size = ~children,
-          type = 'scatter', mode = 'markers', showlegend = F
-  )
+insurance %>% 
+  ggplot(aes(x= bmi, y= charges, colour = smoker)) + geom_point() + 
+  geom_smooth(method="lm")
 ```
 
-#### Animation plot
+These two visualizations show us there are huge differnces between smokers and non-smokers.
+So after next animation plot, im gonna focus on bmi variables of smokers. 
+
+
+### Animation Scatter plot
+
+
 ```{r}
 insurance %>%
-  plot_ly(x = ~bmi, y = ~charges, frame = ~age, 
-          type = 'scatter', mode = 'markers', showlegend = F
-          )
+  plot_ly(x = ~bmi, y = ~charges, color = ~smoker, size = ~children, frame = ~age,
+          type = 'scatter', mode = 'markers', showlegend = T)
 ```
 
+## Analysis
 
-### Box plot
+### Prediction of smokers' health care cost
+
+
 ```{r}
-insurance %>%
-  plot_ly(x = ~smoker, y = ~charges, frame = ~age, 
-          type = 'box')
+insurance.smoker <- insurance %>% filter(smoker == "yes")
+fit <- lm(charges ~ bmi, data = insurance.smoker)
+
+fit
 ```
 
+example 1) bmi:30
+```{r}
+x = 30
+charge.amount <- 1473*x + -13187
+charge.amount
+```
