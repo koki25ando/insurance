@@ -1,0 +1,452 @@
+---
+title: "zozo"
+author: "Koki Ando"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Zozo Technologies
+
+```{r}
+Sys.Date()
+```
+
+
+```{r}
+library(DT)
+library(tidyverse)
+```
+
+# リサーチ課題
+
+ファッションECにおけるレコメンドエンジン。ファッションECの特徴をうまく利用したエンジンを作る想定で以下の問いに答えよ。
+
++ ファッションアイテムを扱うEC上での購買ログにはどのような特徴が存在するのか？商材ごとにEC上におけるユーザーの購買行動は変化する。そのためファッションEC上で起こっていると思われる現状と絡めて説明してください。本問はレコメンドの経験を問うものではないです。自由に回答せよ。参考に一般的なECで得られるデータサンプルを提示する。これの他、実際にECで扱っていると思われるデータやSNSなど外部のデータソースと組み合わせて回答しても構わない。
+
++ 1で説明した特性を利用したレコメンドアルゴリズムを開発し、ECの売上向上を目指す。どんなアルゴリズムが有効だと思うか？アルゴリズムの概要および効果的だと考える理由を説明せよ。
+
++ 2で説明したレコメンドアルゴリズムを実装せよ。一般に公開されいるベンチマーク、もしくは自作したダミーデータを用いてアルゴリズムの稼働確認をせよ。ただし稼働確認に用いるデータはファッションに関係していなくても構わない。1で説明した特性を満たしている必要もない。本問は目的に対して手段を正しく選択できるかを重視するため高度なアルゴリズムである必要はない。
+
+
+## サンプルデータ
+
+### データ読み込み
+
+```{r}
+user <- read.csv("ユーザーマスタ.csv")
+goods <- read.csv("商品マスタ.csv")
+purchase <- read.csv("購買ログ.csv")
+```
+
+### 購買ログ
+
+```{r}
+DT::datatable(purchase)
+```
+
+### 商品マスク
+
+```{r}
+DT::datatable(goods)
+```
+
+### ユーザーマスク
+
+```{r}
+DT::datatable(user)
+```
+
+
+参考文献リスト
+
+・STITCH FIX Tech Blog
+https://multithreaded.stitchfix.com/blog/
+
+・レコメンドの研究者、Julian McAuleyのサイト
+https://cseweb.ucsd.edu/~jmcauley/
+
+・国際会議 ECCV 2018 workshop 採択論文
+https://sites.google.com/view/eccvfashion/papers
+
+・国際会議 ICCV 2017 workshop Computer Vision For Fashion
+https://sites.google.com/zalando.de/cvf-iccv2017/
+
+[mhahsler/Arurles](https://github.com/mhahsler/arules)
+
+## 一般的なレコメンドエンジン
+
+### 強調フィルタリング
+
+購買履歴を元に商品をレコメンドする仕組み。Market Basket Analysis. ユーザーの嗜好に似た人が見た商品は新しい商品が自分の嗜好にマッチングする可能性が高いため、ユーザーは思いがけない商品を発掘する体験ができる。
+
+参考文献: [MBA](https://www.kaggle.com/xvivancos/market-basket-analysis)
+
+### コンテンツベースフィルタリング
+
+商品サービスの属性情報とユーザーの興味関心との関連性をもとにレコメンドを行う仕組みを指す。個々のユーザーを分類することでユーザーごとのレコメンドシステムを構築する。
+クラスタリング分析。
+
+### ハイブリッドタイプ
+
+ファッションアイテムを扱うEC上での購買ログにはどのような特徴が存在するのか？ 
+
+自分はこの問いに対して、普段自分がどのような行動をオンラインショッピングサイトで行なっているか、ということを想起するところから始めた。 
+自分は普段、ECサイトを訪れる際に、何か目的を持っている。中には、単なるウィンドーショッピング目的で訪れ、そこで気になった商品があるとクリックして購買するというユーザーも多いであろうが、自分にはそのケースは当てはまらないため、今回の分析レポートの分析対象からは外すとした。 
+自分の場合、必ず一つの求めていた商品を見つけた後に、関連商品やその他セール対象になっている商品なども探し、複数個の商品をカートにプールして決済を行う。 
+自分のこのようなECサイト上での行動経験をもとに以下の特徴が大きくあると仮定した。 
+
+ユーザーは最も優先順位の高い商品を買うのみではなく、それに関連した商品も探し、同時に決済することが多い。 
+
+以上の仮説をもとに分析レポートを作成していく。 
+
+## Twitterでの属性分析
+
+SNSを用いてzozotown代表としたファッションECサイトのユーザー属性を考えてみる。
+
+```{r}
+# devtools::install_github("mkearney/rtweet")
+library(rtweet)
+library(httr)
+
+# packageVersion("rtweet")
+
+appname <- "Nike_Tweets_Analysis"
+key <- "hIE9CVVsHFsGPWHsvjj9vc52X"
+secret <- "I3CvypiOgfyjck9DDn0RsOKvJAUveAS3krFOK9ShLscd4iVie1"
+at <- "2183834275-Tdz35pNu5m4SLJDLeqSQgLNixCGbnGpwTWYprV7"
+as <- "2ymbDG538YprpMCQgoRJQYo1xLIydZixEAABlze7YFNEV"
+
+twitter_token <- rtweet::create_token(
+  app = appname,
+  consumer_key = key,
+  consumer_secret = secret,
+  access_token = at, 
+  access_secret = as)
+```
+
+```{r}
+zozo_tweets <- search_tweets(q = "zozotown", n = 20000) #テキストに"zozotown"を含むツイートを20,000個抽出
+zozo_tweets %>% 
+  head(20)
+```
+
+```{r}
+unique_zozo <- zozo_tweets[!duplicated(zozo_tweets$screen_name),] #重複したユーザーを削除 10,334行のデータまで絞り込む
+data.frame(table(unique_zozo$location)) %>% 
+  # na.omit() %>% 
+  arrange(desc(Freq)) %>% 
+  head(20)
+```
+
+トップ20のユーザーの住んでいる地域をみてみたがやはり、人口の集中している場所にユーザーは多そうである。一方でユーザーの中でも北海道が上位に入ってくるということはやはり、寒い地域（都会から離れた地域）にも多くユーザーはいる。
+
+その為、同じ時期であっても気候には日本各地で大きく違うのでユーザーの需要も変わってくると言える。その為、ユーザーの年代や性別のみに留意してレコメンドエンジンを実装するのではなく、ユーザーの住所などによってのクラスタリングが必要となってきそうだ。
+
+
+以上のことから、これから自分が実装するレコメンドエンジンには大きく二つのレイヤーが必要だと考えた。
+
+一つは、ユーザーごとのクラスタリング。
+もう一つは同クラスターないでの購買ログ、相関ルールを用いたマーケットバスケット分析。
+
+これによって、ユーザーという因子と、一番最初にカートに入れた商品という二つ目の因子とを組み合わせてレコメンド機能を実装することを試みる。
+
+
+
+## Market Basket Analysisの概要
+
+この分析を行う上で効果的だと思われた手法はMarket Basket Analysisという手法である。 
+この手法をメリットとデメリットを明記し、他に選べたであろう分析手法となぜそれら選ばなかったのかについての理由を提示する。 
+
+### Market Basket Analysisとは何か？ 
+
+>Market Basket Analysisは商品同士の関連性を明らかにする為に小売大手によって用いられている重要な技術の一つである。主に、商品決済において頻繁に同時に取引される商品の組み合わせを明らかにすることによって当分析手法は効果を発揮する。言うなれば、当手法は顧客が買う商品の関連性を売り手側に 明示するものである。
+(筆者日本語訳) 
+Market Basket Analysis is one of the key techniques used by large retailers to uncover associations between items. It works by looking for combinations of items that occur together frequently in transactions. To put it another way, it allows retailers to identify relationships between the items that people buy.
+[R-bloggers](https://www.r-bloggers.com/a-gentle-introduction-on-market-basket-analysis%E2%80%8A-%E2%80%8Aassociation-rules/)より引用 
+
+### キーとなる指標
+
+このレポートでは、売上のパターンを発掘するためにこの統計手法を用いる。"cross-selling opportunities"を見つける。例)商品Aを購入した顧客は商品Bも共に購入する傾向がある。
+
++ Probabilities
++ Support
++ Confidence
++ Lift
++ Conviction
+
+#### Probabilities
+
+```{r}
+Probability_df <- data.frame(table(transactions_df$Item)) %>% 
+  mutate(Pro = round(Freq/sum(Freq), digits = 5))
+
+Probability_df %>% 
+  # head(20) %>%
+  ggplot(aes(x = Var1, y = (Freq/nrow(transactions_df)), fill = Var1)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  coord_flip() +
+  labs(x = "Item Name", y = "Frequency")
+```
+
+#### Support
+
+[intro](http://r-statistics.co/Association-Mining-With-R.html)
+[intro pdf](https://cran.r-project.org/web/packages/arules/vignettes/arules.pdf)
+
+probability that a customer will buy two items (A & B) together
+–  P(Fins & Mask) = 150/1000 = 0.15 (read from Table)
+
+
+
+```{r}
+# Create purchase set
+## Spread
+transactions_df %>% 
+  arrange(Transaction, Item) %>% 
+  group_by(Transaction) %>% 
+  spread(Item)
+
+transactions_df %>% head()
+```
+
+```{r}
+transactions_df %>% 
+  mutate(ID = paste(Date, Transaction, sep=":")) %>% 
+  head(10) %>% 
+  group_by(Transaction) %>% 
+  spread(key=Item, value=Transaction)
+```
+
+
+```{r}
+head(transactions_df, 10) %>% 
+  reshape(idvar=c("Date", "Time", "Item"), timevar = "Transaction", direction="wide")
+```
+
+```{r}
+head(transactions_df, 10) %>% 
+  group_by(Transaction) %>%
+  # mutate(num = 1:row_number(transactions_df))
+  add_row_numbers()
+```
+
+
+
+
+```{r}
+itemset <- transactions_df %>% 
+  group_by(Transaction) %>%
+  summarize(ItemSet = list(Item))
+for (i in 1:10){
+ itemset$ItemSet[[i]] <- as.character(itemset$ItemSet[[i]])
+}
+
+test = list()
+for (i in 1:10){
+  itemset$ItemSet[[i]] %>% 
+    print()
+}
+```
+
+
+```{r}
+itemset$ItemSet[[3]][1:2] %>% 
+  unlist() %>% 
+  as.character()
+paste(itemset$ItemSet[[3]][1], itemset$ItemSet[[3]][2], sep = ", ")
+
+paste0(itemset$ItemSet[[3]][1], sep = ", ")
+
+dummy_df = data.frame()
+dummy_df$num <- 1
+for (i in 1:10){
+  itemlist = itemset$ItemSet[[i]]
+  dummy_df$num[i] = length(itemlist)
+  print(itemlist)
+}
+
+do.call(rbind.data.frame, itemset$ItemSet[1])
+getwd()
+```
+
+
+```{r}
+set_list = list()
+
+for (i in 1:9531){
+  len <- length(itemset$ItemSet[[i]])
+  
+  if (len == 1) {
+    msg = itemset$ItemSet[[i]][1]
+  } else if (len == 2){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], sep = ", ")
+  } else if (len == 3){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], sep = ", ")
+  } else if (len == 4){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4], 
+                sep = ", ")
+  } else if (len == 5){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4],
+                itemset$ItemSet[[i]][5],
+                sep = ", ")
+  } else if (len == 6){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4], 
+                itemset$ItemSet[[i]][5], itemset$ItemSet[[i]][6],
+                sep = ", ")
+  } else if (len == 7){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4],
+                itemset$ItemSet[[i]][5], itemset$ItemSet[[i]][6], itemset$ItemSet[[i]][7],
+                sep = ", ")
+  } else if (len == 8){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4],
+                itemset$ItemSet[[i]][5], itemset$ItemSet[[i]][6], itemset$ItemSet[[i]][7], itemset$ItemSet[[i]][8],
+                sep = ", ")
+  } else if (len == 9){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4],
+                itemset$ItemSet[[i]][5], itemset$ItemSet[[i]][6], itemset$ItemSet[[i]][7], itemset$ItemSet[[i]][8],
+                itemset$ItemSet[[i]][9],
+                sep = ", ")
+  } else if (len == 10){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4],
+                itemset$ItemSet[[i]][5], itemset$ItemSet[[i]][6], itemset$ItemSet[[i]][7], itemset$ItemSet[[i]][8],
+                itemset$ItemSet[[i]][9], itemset$ItemSet[[i]][10],
+                sep = ", ")
+  } else if (len == 11){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4],
+                itemset$ItemSet[[i]][5], itemset$ItemSet[[i]][6], itemset$ItemSet[[i]][7], itemset$ItemSet[[i]][8],
+                itemset$ItemSet[[i]][9], itemset$ItemSet[[i]][10], itemset$ItemSet[[i]][11],
+                sep = ", ")
+  } else if (len == 12){
+    msg = paste(itemset$ItemSet[[i]][1], itemset$ItemSet[[i]][2], itemset$ItemSet[[i]][3], itemset$ItemSet[[i]][4],
+                itemset$ItemSet[[i]][5], itemset$ItemSet[[i]][6], itemset$ItemSet[[i]][7], itemset$ItemSet[[i]][8],
+                itemset$ItemSet[[i]][9], itemset$ItemSet[[i]][10], itemset$ItemSet[[i]][11], itemset$ItemSet[[i]][12],
+                sep = ", ")
+  } else {
+    msg = itemset$ItemSet[[i]]
+  }
+  
+  set_list[[i]] = msg
+}
+
+transaction_set = do.call(rbind, set_list)
+data.frame(transaction_set) %>% 
+  head(20)
+```
+
+```{r}
+transactions_df %>% 
+  filter(Transaction == 19)
+```
+
+
+## Confidence
+
+probability that customer buys B, given that they already bought A
+–  P(Fins | Mask) = Support/Probability = 0.15/0.27 = 0.5556
+
+## Lift
+
+ratio of confidence to the base probability of just buying items
+–  P(Fins | Mask)/ P(Fins) = 0.556/ 0.28 = 1.98 (Confidence/Base Probability)
+
+
+以上が、オンライン文献より引用した説明であるが、このレポートではこの分析手法を用いて、どの商品が同時に購入されることが多いか、を発見する。その後に、自分のように最も優先順位の高い商品を買ったユーザーに対して頻繁に同時に購入されている商品を提示しやすくし、さらなる購買を促すというレコメンドエンジンを作成する。
+
+
+# アルゴリズムの実装
+
+## 用いるデータ
+
+残念ながら、双方に関連した、購買ログとユーザーデータを見つけることはできなかった。その為、それぞれ違うデータを用いて行う。
+購買ログデータには、商品のパターンを認識でいるように、誰がいつ何を何個買ったのかが記録されている、[Bread Basket data](https://github.com/viktree/curly-octo-chainsaw/blob/master/requirements.txt)データを用いてる。
+ユーザーデータは今回考慮する、地域と性別、年代の要素が記録されているデータを用いる。
+後者のデータには筆者が開発した、地域分析システムAPIパッケージを用いてダミーデータを作成した。
+ダミーデータの作成は[こちら]をご覧いただきたい。
+
+### Data component
+ダミーデータは一万人のユーザーを想定して一万行のデータに、それぞれ性別、年代、住んでいる都道府県の変数を挿入した。
+
+
+
+
+[R-Bloggers](https://www.r-bloggers.com/association-rules-and-market-basket-analysis-with-r/)
+
+分析に用いるパッケージ
+[Tidyverse](https://github.com/tidyverse/tidyverse) データの前処理や可視化などを行う為に用いる
+[arules](https://github.com/mhahsler/arules) 相関ルールなどに特化したRパッケージを実験的に利用してみる。
+
+[Python参考文献](https://www.kaggle.com/aboliveira/bakery-market-basket-analysis/data)
+
+サンプルデータとしては
+
+
+[Bread Basket data](https://github.com/viktree/curly-octo-chainsaw/blob/master/requirements.txt)
+
+スコットランドのBread Basket社が以前提供していた匿名顧客の2016年10月30日から2017年4月9日までの購買データをもとに分析を行う。
+
+```{r}
+library(arules)
+transactions_df <- read.csv("BreadBasket_DMS.csv")
+transactions <- read.transactions("BreadBasket_DMS.csv")
+```
+
+```{r}
+head(transactions_df)
+transactions_df[!duplicated(transactions_df$Transaction),] %>% 
+  nrow()
+```
+
+
+
+```{r}
+summary(transactions)
+str(transactions)
+glimpse(transactions)
+```
+
+
+
+### 動作確認
+
+```{r}
+gender <- "F"
+Age <- 22
+Address <- "北海道"
+First_goods <- "Coffee"
+
+
+recommend_me <- function(){
+  
+}
+
+recommend_me(gender = "F", Age = 22, Address = "北海道", First_goods = "Coffee")
+```
+
+# Limitations
+
++ 使用したデータは食品でありさらには、保存が効かない商品についてだった。その為季節性の激しいさらには長持ちする衣類を対象にすると思うような効果を出せない可能性もある。
++ さらには一般的に衣類はブランド品から日用品といったものまで幅広い価格帯の商品が多く、さらには季節性も激しいと思われる。
+
+# Challenges to overcome
+
++ 商品の価格帯が大きく変動するので、ユーザーごとにクラスタリングしたのちに、クラスターごとの購買ログから上述したパターン認識を行い商品をレコメンドするといった手法も実行可能ではありそう。実際のデータがあれば是非とも挑戦したいと思った。
++ このレポートで用いたように扱う商品が多くなればなるほどなかなか組み合わせというものは見つけづらいかも知れない。その為、サンプルデータで提供されていたような小カテゴリやブランドといった要因で同時に購入される商品の組み合わせを発掘して、レコメンドするという方法も可能であると思われる。
+
+
+以上。安藤光希
+
+
+
+
+
+
+
+
+
+
+
+

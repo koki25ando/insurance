@@ -1,0 +1,38 @@
+---
+title: "zozo user_dummy"
+author: "Koki Ando"
+date: "1/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+api_key = "8CCU5wD2PMQvPFDYGosjneAaRBKwfrf7ikBjRNOA"
+```
+
+
+```{r}
+devtools::install_github("koki25ando/ResasAPI")
+library(ResasAPI)
+```
+
+```{r}
+prefecture_population_list = list()
+for (i in 1:47) {
+  prefecture_population_list[[i]] <- getPopulationStats(api_key, cityCode="-", prefCode=i)
+  print(i)
+}
+
+getPopulationStats(api_key, cityCode="-", prefCode=47)
+```
+
+```{r}
+pa_age <- read.csv("PA_population.csv")
+```
+
+
