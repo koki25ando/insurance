@@ -17,7 +17,24 @@ dummy_df$年平均気温 <- dummy_df$年平均気温 %>%
   str_remove("度摂氏") %>% 
   as.numeric()
 
+write.csv(dummy_df, "dummy_df.csv")
 dummy_df %>% 
   ggplot(aes(x = 年齢, y = 年平均気温)) +
   geom_point()
-  head()
+
+  
+# Clustering
+library(cluster)
+head(dummy_km5)
+
+model <- kmeans(dummy_df %>% 
+                  select(年平均気温, 年齢), center = 10)
+dummy_km10 <- mutate(dummy_df %>% 
+                      select(年平均気温, 年齢), cluster = model$cluster)
+dummy_km10 %>% 
+  ggplot(aes(x = 年齢, y = 年平均気温, colour = as.factor(cluster))) +
+  geom_point() +
+  stat_ellipse(show.legend = F)
+
+
+
