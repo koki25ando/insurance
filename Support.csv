@@ -1,0 +1,1052 @@
+"","Var1","Freq","Support"
+"1","Coffee",1762,0.189441995484357
+"2","Bread",1557,0.167401354693044
+"3","Tea",558,0.059993549080744
+"4","Cake",300,0.0322545962799699
+"5","Sandwich",285,0.0306418664659714
+"6","Pastry",272,0.0292441672938394
+"7","Farm House",255,0.0274164068379744
+"8","Medialuna",218,0.0234383399634448
+"9","Hot chocolate",215,0.0231157940006451
+"10","Cookies",171,0.0183851198795828
+"11","Scandinavian",164,0.0176325126330502
+"12","Soup",141,0.0151596602515859
+"13","Muffin",124,0.0133318997957209
+"14","Brownie",122,0.0131168691538544
+"15","Alfajores",104,0.0111815933770562
+"16","Juice",99,0.0106440167723901
+"17","Scone",98,0.0105365014514568
+"18","Baguette",94,0.0101064401677239
+"19","Toast",92,0.00989140952585743
+"20","Coke",87,0.00935383292119127
+"21","Fudge",78,0.00838619503279217
+"22","Jam",71,0.00763358778625954
+"23","Coffee, Bread",69,0.00741855714439308
+"24","Truffles",61,0.00655843457692721
+"25","Coffee, Coffee",58,0.00623588861412751
+"26","Spanish Brunch",56,0.00602085797226105
+"27","Tiffin",52,0.00559079668852812
+"28","Chicken Stew",45,0.00483818944199548
+"29","Bread, Coffee",44,0.00473067412106225
+"30","Mineral water",41,0.00440812815826255
+"31","Hearty & Seasonal",40,0.00430061283732932
+"32","Jammie Dodgers",37,0.00397806687452962
+"33","Coffee, Cake",35,0.00376303623266315
+"34","Afternoon with the baker",33,0.00354800559079669
+"35","Frittata",31,0.00333297494893022
+"36","Coffee, Pastry",29,0.00311794430706376
+"37","Focaccia",29,0.00311794430706376
+"38","Salad",27,0.00290291366519729
+"39","Coffee, Medialuna",26,0.00279539834426406
+"40","Coffee, Tea",21,0.00225782173959789
+"41","Tartine",20,0.00215030641866466
+"42","Keeping It Local",19,0.00204279109773143
+"43","The Nomad",19,0.00204279109773143
+"44","Smoothies",18,0.00193527577679819
+"45","Vegan mincepie",18,0.00193527577679819
+"46","Bread, Pastry",17,0.00182776045586496
+"47","Coffee, Toast",17,0.00182776045586496
+"48","Tshirt",16,0.00172024513493173
+"49","Coffee, Muffin",15,0.00161272981399849
+"50","Bread, Bread",14,0.00150521449306526
+"51","Coffee, Cookies",14,0.00150521449306526
+"52","Coffee, Sandwich",14,0.00150521449306526
+"53","Eggs",13,0.00139769917213203
+"54","Bakewell",12,0.0012901838511988
+"55","Pastry, Coffee",11,0.00118266853026556
+"56","Tea, Bread",11,0.00118266853026556
+"57","Tea, Coffee",11,0.00118266853026556
+"58","Coffee, Alfajores",10,0.00107515320933233
+"59","Coffee, Coffee, Cake",10,0.00107515320933233
+"60","Granola",10,0.00107515320933233
+"61","Valentine's card",10,0.00107515320933233
+"62","Coffee, Coffee, Pastry",9,0.000967637888399097
+"63","Medialuna, Coffee",9,0.000967637888399097
+"64","Art Tray",8,0.000860122567465864
+"65","Bread, Cake",8,0.000860122567465864
+"66","Bread, Cookies",8,0.000860122567465864
+"67","Coffee, Coffee, Bread",8,0.000860122567465864
+"68","Sandwich, Coffee",8,0.000860122567465864
+"69","Bread, Medialuna",7,0.000752607246532631
+"70","Cake, Coffee",7,0.000752607246532631
+"71","Christmas common",7,0.000752607246532631
+"72","Coffee, Hot chocolate",7,0.000752607246532631
+"73","Coffee, Pastry, Bread",7,0.000752607246532631
+"74","Dulce de Leche",7,0.000752607246532631
+"75","Mighty Protein",7,0.000752607246532631
+"76","Muesli",7,0.000752607246532631
+"77","Bread, Coffee, Pastry",6,0.000645091925599398
+"78","Bread, Sandwich",6,0.000645091925599398
+"79","Coffee, Scone",6,0.000645091925599398
+"80","Coffee, Tea, Cake",6,0.000645091925599398
+"81","Ella's Kitchen Pouches",6,0.000645091925599398
+"82","Hot chocolate, Coffee",6,0.000645091925599398
+"83","Pintxos",6,0.000645091925599398
+"84","Vegan Feast",6,0.000645091925599398
+"85","Bread, Brownie",5,0.000537576604666165
+"86","Bread, Muffin",5,0.000537576604666165
+"87","Bread, Scandinavian",5,0.000537576604666165
+"88","Bread, Tea",5,0.000537576604666165
+"89","Coffee, Cake, Bread",5,0.000537576604666165
+"90","Coffee, Coffee, Medialuna",5,0.000537576604666165
+"91","Coffee, Jammie Dodgers",5,0.000537576604666165
+"92","Coffee, Keeping It Local",5,0.000537576604666165
+"93","Coffee, Tiffin",5,0.000537576604666165
+"94","Pastry, Bread",5,0.000537576604666165
+"95","Postcard",5,0.000537576604666165
+"96","Sandwich, Coffee, Bread",5,0.000537576604666165
+"97","Scone, Coffee",5,0.000537576604666165
+"98","Soup, Coffee",5,0.000537576604666165
+"99","Victorian Sponge",5,0.000537576604666165
+"100","Basket",4,0.000430061283732932
+"101","Bread, Baguette",4,0.000430061283732932
+"102","Bread, Coffee, Medialuna",4,0.000430061283732932
+"103","Bread, Farm House",4,0.000430061283732932
+"104","Bread, Jam",4,0.000430061283732932
+"105","Bread, Tea, Pastry",4,0.000430061283732932
+"106","Chocolates",4,0.000430061283732932
+"107","Coffee granules",4,0.000430061283732932
+"108","Coffee, Bread, Bread",4,0.000430061283732932
+"109","Coffee, Bread, Pastry",4,0.000430061283732932
+"110","Coffee, Coffee, Brownie",4,0.000430061283732932
+"111","Coffee, Coffee, Pastry, Pastry",4,0.000430061283732932
+"112","Coffee, Coffee, Sandwich",4,0.000430061283732932
+"113","Coffee, Coffee, Toast",4,0.000430061283732932
+"114","Coffee, Juice",4,0.000430061283732932
+"115","Coffee, Spanish Brunch",4,0.000430061283732932
+"116","Coffee, Truffles",4,0.000430061283732932
+"117","Empanadas",4,0.000430061283732932
+"118","Extra Salami or Feta",4,0.000430061283732932
+"119","Gingerbread syrup",4,0.000430061283732932
+"120","Bread, Bread, Coffee",3,0.000322545962799699
+"121","Bread, Coffee, Bread",3,0.000322545962799699
+"122","Bread, Coffee, Coffee",3,0.000322545962799699
+"123","Bread, Focaccia",3,0.000322545962799699
+"124","Bread, Mineral water",3,0.000322545962799699
+"125","Bread, Scone",3,0.000322545962799699
+"126","Cake, Bread",3,0.000322545962799699
+"127","Cake, Tea",3,0.000322545962799699
+"128","Coffee, Bread, Alfajores",3,0.000322545962799699
+"129","Coffee, Bread, Cake",3,0.000322545962799699
+"130","Coffee, Bread, Farm House",3,0.000322545962799699
+"131","Coffee, Bread, Scone",3,0.000322545962799699
+"132","Coffee, Brownie",3,0.000322545962799699
+"133","Coffee, Chicken Stew",3,0.000322545962799699
+"134","Coffee, Coffee, Alfajores",3,0.000322545962799699
+"135","Coffee, Coffee, Cookies",3,0.000322545962799699
+"136","Coffee, Coffee, Scone, Cake",3,0.000322545962799699
+"137","Coffee, Coffee, Tea",3,0.000322545962799699
+"138","Coffee, Farm House",3,0.000322545962799699
+"139","Coffee, Hot chocolate, Bread",3,0.000322545962799699
+"140","Coffee, Salad",3,0.000322545962799699
+"141","Coffee, Soup",3,0.000322545962799699
+"142","Coffee, Tea, Toast",3,0.000322545962799699
+"143","Coffee, Toast, Bread",3,0.000322545962799699
+"144","Cookies, Bread",3,0.000322545962799699
+"145","Crepes",3,0.000322545962799699
+"146","Crisps",3,0.000322545962799699
+"147","Half slice Monster",3,0.000322545962799699
+"148","Hot chocolate, Bread",3,0.000322545962799699
+"149","Hot chocolate, Coffee, Cake",3,0.000322545962799699
+"150","Kids biscuit",3,0.000322545962799699
+"151","My-5 Fruit Shoot",3,0.000322545962799699
+"152","Pastry, Coffee, Coffee",3,0.000322545962799699
+"153","Sandwich, Bread",3,0.000322545962799699
+"154","Spanish Brunch, Coffee",3,0.000322545962799699
+"155","Tea, Bread, Cake",3,0.000322545962799699
+"156","Tea, Cake",3,0.000322545962799699
+"157","Tea, Coffee, Bread",3,0.000322545962799699
+"158","Tea, Coffee, Cake",3,0.000322545962799699
+"159","Tea, Tea",3,0.000322545962799699
+"160","Toast, Coffee",3,0.000322545962799699
+"161","Alfajores, Coffee",2,0.000215030641866466
+"162","Argentina Night",2,0.000215030641866466
+"163","Bread, Alfajores",2,0.000215030641866466
+"164","Bread, Coffee, Brownie",2,0.000215030641866466
+"165","Bread, Coffee, Hot chocolate",2,0.000215030641866466
+"166","Bread, Coffee, Keeping It Local",2,0.000215030641866466
+"167","Bread, Coffee, Scone",2,0.000215030641866466
+"168","Bread, Coffee, Toast",2,0.000215030641866466
+"169","Bread, Fudge, Cookies",2,0.000215030641866466
+"170","Bread, Pastry, Bread",2,0.000215030641866466
+"171","Bread, Soup",2,0.000215030641866466
+"172","Bread, Spanish Brunch",2,0.000215030641866466
+"173","Bread, Toast",2,0.000215030641866466
+"174","Bread, Vegan mincepie",2,0.000215030641866466
+"175","Brownie, Coffee",2,0.000215030641866466
+"176","Cake, Coffee, Hot chocolate",2,0.000215030641866466
+"177","Coffee, Alfajores, Pastry",2,0.000215030641866466
+"178","Coffee, Baguette",2,0.000215030641866466
+"179","Coffee, Bread, Cake, Bread",2,0.000215030641866466
+"180","Coffee, Bread, Sandwich",2,0.000215030641866466
+"181","Coffee, Bread, Toast",2,0.000215030641866466
+"182","Coffee, Coffee, Bread, Pastry",2,0.000215030641866466
+"183","Coffee, Coffee, Cake, Alfajores",2,0.000215030641866466
+"184","Coffee, Coffee, Cake, Cake",2,0.000215030641866466
+"185","Coffee, Coffee, Medialuna, Bread",2,0.000215030641866466
+"186","Coffee, Coffee, Medialuna, Cake",2,0.000215030641866466
+"187","Coffee, Coffee, Medialuna, Cookies",2,0.000215030641866466
+"188","Coffee, Coffee, Pastry, Medialuna",2,0.000215030641866466
+"189","Coffee, Coffee, Smoothies, Toast",2,0.000215030641866466
+"190","Coffee, Coffee, Soup",2,0.000215030641866466
+"191","Coffee, Coke",2,0.000215030641866466
+"192","Coffee, Coke, Pastry",2,0.000215030641866466
+"193","Coffee, Hot chocolate, Brownie",2,0.000215030641866466
+"194","Coffee, Hot chocolate, Medialuna",2,0.000215030641866466
+"195","Coffee, Hot chocolate, Pastry",2,0.000215030641866466
+"196","Coffee, Juice, Pastry",2,0.000215030641866466
+"197","Coffee, Medialuna, Muffin",2,0.000215030641866466
+"198","Coffee, Medialuna, Pastry",2,0.000215030641866466
+"199","Coffee, Muffin, Bread",2,0.000215030641866466
+"200","Coffee, Pastry, Medialuna",2,0.000215030641866466
+"201","Coffee, Sandwich, Bread",2,0.000215030641866466
+"202","Coffee, Scandinavian",2,0.000215030641866466
+"203","Coffee, Soup, Sandwich",2,0.000215030641866466
+"204","Coffee, Tea, Bread",2,0.000215030641866466
+"205","Coffee, Tea, Cake, Bread",2,0.000215030641866466
+"206","Coffee, Tea, Cookies",2,0.000215030641866466
+"207","Coffee, The Nomad",2,0.000215030641866466
+"208","Cookies, Tea, Bread",2,0.000215030641866466
+"209","Farm House, Coffee",2,0.000215030641866466
+"210","Farm House, Coffee, Cookies",2,0.000215030641866466
+"211","Hot chocolate, Bread, Medialuna, Toast",2,0.000215030641866466
+"212","Jam, Coffee, Coffee",2,0.000215030641866466
+"213","Jammie Dodgers, Bread",2,0.000215030641866466
+"214","Muffin, Coffee, Coffee",2,0.000215030641866466
+"215","Pastry, Coffee, Juice",2,0.000215030641866466
+"216","Pastry, Medialuna, Coffee",2,0.000215030641866466
+"217","Pick and Mix Bowls",2,0.000215030641866466
+"218","Sandwich, Bread, Coffee",2,0.000215030641866466
+"219","Scandinavian, Bread",2,0.000215030641866466
+"220","Scandinavian, Muffin",2,0.000215030641866466
+"221","Scone, Coffee, Coffee",2,0.000215030641866466
+"222","Scone, Tea",2,0.000215030641866466
+"223","Tea, Coffee, Alfajores",2,0.000215030641866466
+"224","Tea, Coffee, Coffee",2,0.000215030641866466
+"225","Tea, Coffee, Muffin",2,0.000215030641866466
+"226","Tea, Coffee, Pastry",2,0.000215030641866466
+"227","Tea, Coffee, Sandwich, Sandwich",2,0.000215030641866466
+"228","Tiffin, Coffee",2,0.000215030641866466
+"229","Toast, Bread",2,0.000215030641866466
+"230","Toast, Coffee, Bread",2,0.000215030641866466
+"231","Afternoon with the baker, Coffee, Scandinavian",1,0.000107515320933233
+"232","Alfajores, Alfajores, Coffee",1,0.000107515320933233
+"233","Alfajores, Alfajores, Coffee, Coffee",1,0.000107515320933233
+"234","Alfajores, Alfajores, Coffee, Coffee, Coffee",1,0.000107515320933233
+"235","Alfajores, Alfajores, Coffee, Sandwich, Sandwich, Bread",1,0.000107515320933233
+"236","Alfajores, Bread, Coffee",1,0.000107515320933233
+"237","Alfajores, Bread, Coffee, Coffee",1,0.000107515320933233
+"238","Alfajores, Bread, My-5 Fruit Shoot, Juice",1,0.000107515320933233
+"239","Alfajores, Bread, Tea, Coffee",1,0.000107515320933233
+"240","Alfajores, Brownie, Cake",1,0.000107515320933233
+"241","Alfajores, Cake, Coffee, Coffee",1,0.000107515320933233
+"242","Alfajores, Cake, Coffee, Sandwich, Sandwich, My-5 Fruit Shoot",1,0.000107515320933233
+"243","Alfajores, Coffee, Tea",1,0.000107515320933233
+"244","Alfajores, Cookies, Bread, Bread",1,0.000107515320933233
+"245","Alfajores, Pastry",1,0.000107515320933233
+"246","Alfajores, Pastry, Baguette, Coffee, Coffee",1,0.000107515320933233
+"247","Alfajores, Tea",1,0.000107515320933233
+"248","Alfajores, Tea, Coffee",1,0.000107515320933233
+"249","Art Tray, Coffee",1,0.000107515320933233
+"250","Art Tray, Coffee, Coffee, Brownie",1,0.000107515320933233
+"251","Art Tray, Coffee, Coffee, Juice",1,0.000107515320933233
+"252","Baguette, Bread",1,0.000107515320933233
+"253","Baguette, Bread, Coffee, Coffee",1,0.000107515320933233
+"254","Baguette, Coffee",1,0.000107515320933233
+"255","Baguette, Coffee, Coffee, Coffee, Salad, Art Tray, Alfajores",1,0.000107515320933233
+"256","Baguette, Pastry",1,0.000107515320933233
+"257","Bakewell, Coffee",1,0.000107515320933233
+"258","Bakewell, Coffee, Soup",1,0.000107515320933233
+"259","Bakewell, Hot chocolate, Toast, Chicken Stew",1,0.000107515320933233
+"260","Basket, Bread",1,0.000107515320933233
+"261","Basket, Bread, Coffee",1,0.000107515320933233
+"262","Bread, Alfajores, Alfajores",1,0.000107515320933233
+"263","Bread, Alfajores, Bread",1,0.000107515320933233
+"264","Bread, Alfajores, Muffin",1,0.000107515320933233
+"265","Bread, Art Tray, Tea, Hot chocolate",1,0.000107515320933233
+"266","Bread, Baguette, Hot chocolate, Coffee, Toast",1,0.000107515320933233
+"267","Bread, Baguette, Scandinavian",1,0.000107515320933233
+"268","Bread, Bread, Brownie, Scone",1,0.000107515320933233
+"269","Bread, Bread, Cake, Soup, Smoothies, Sandwich",1,0.000107515320933233
+"270","Bread, Bread, Coffee, Coffee, Coffee, Tiffin, Medialuna, Sandwich",1,0.000107515320933233
+"271","Bread, Bread, Pastry",1,0.000107515320933233
+"272","Bread, Bread, Sandwich",1,0.000107515320933233
+"273","Bread, Bread, Tea, Pastry",1,0.000107515320933233
+"274","Bread, Brownie, Juice, Cake",1,0.000107515320933233
+"275","Bread, Brownie, Muffin",1,0.000107515320933233
+"276","Bread, Brownie, Scandinavian, Coffee, Coffee, Soup",1,0.000107515320933233
+"277","Bread, Cake, Bread, Juice, Coffee",1,0.000107515320933233
+"278","Bread, Cake, Coffee, Bread",1,0.000107515320933233
+"279","Bread, Cake, Coffee, Coffee, Coffee",1,0.000107515320933233
+"280","Bread, Cake, Coffee, Tea, Scandinavian",1,0.000107515320933233
+"281","Bread, Cake, Cookies",1,0.000107515320933233
+"282","Bread, Cake, Jammie Dodgers",1,0.000107515320933233
+"283","Bread, Cake, Spanish Brunch",1,0.000107515320933233
+"284","Bread, Chicken Stew, Sandwich, Coffee",1,0.000107515320933233
+"285","Bread, Coffee, Alfajores, Bread",1,0.000107515320933233
+"286","Bread, Coffee, Alfajores, Cookies",1,0.000107515320933233
+"287","Bread, Coffee, Alfajores, Medialuna",1,0.000107515320933233
+"288","Bread, Coffee, Bakewell, Lemon and coconut",1,0.000107515320933233
+"289","Bread, Coffee, Cake",1,0.000107515320933233
+"290","Bread, Coffee, Coffee, Bread, Toast",1,0.000107515320933233
+"291","Bread, Coffee, Coffee, Coffee",1,0.000107515320933233
+"292","Bread, Coffee, Coffee, Cookies",1,0.000107515320933233
+"293","Bread, Coffee, Coffee, Cookies, Cake",1,0.000107515320933233
+"294","Bread, Coffee, Coffee, Pastry",1,0.000107515320933233
+"295","Bread, Coffee, Cookies",1,0.000107515320933233
+"296","Bread, Coffee, Cookies, Brownie",1,0.000107515320933233
+"297","Bread, Coffee, Frittata, Cookies, Mineral water",1,0.000107515320933233
+"298","Bread, Coffee, Frittata, Farm House",1,0.000107515320933233
+"299","Bread, Coffee, Jammie Dodgers",1,0.000107515320933233
+"300","Bread, Coffee, Jammie Dodgers, Alfajores",1,0.000107515320933233
+"301","Bread, Coffee, Juice",1,0.000107515320933233
+"302","Bread, Coffee, Juice, Cake",1,0.000107515320933233
+"303","Bread, Coffee, Juice, Scone",1,0.000107515320933233
+"304","Bread, Coffee, Medialuna, Bread",1,0.000107515320933233
+"305","Bread, Coffee, Medialuna, Farm House",1,0.000107515320933233
+"306","Bread, Coffee, Medialuna, Hearty & Seasonal, Bread",1,0.000107515320933233
+"307","Bread, Coffee, Pastry, Chicken Stew",1,0.000107515320933233
+"308","Bread, Coffee, Pastry, Pastry",1,0.000107515320933233
+"309","Bread, Coffee, Salad, Spanish Brunch",1,0.000107515320933233
+"310","Bread, Coffee, Sandwich",1,0.000107515320933233
+"311","Bread, Coffee, Sandwich, Medialuna",1,0.000107515320933233
+"312","Bread, Coffee, Sandwich, Spanish Brunch, Bread",1,0.000107515320933233
+"313","Bread, Coffee, Scone, Cookies, Soup, Salad, Truffles, Mineral water",1,0.000107515320933233
+"314","Bread, Coffee, Soup, Muffin",1,0.000107515320933233
+"315","Bread, Coffee, Tea",1,0.000107515320933233
+"316","Bread, Coffee, Tea, Cake",1,0.000107515320933233
+"317","Bread, Coffee, Tea, Cookies, Hot chocolate",1,0.000107515320933233
+"318","Bread, Cookies, Coffee",1,0.000107515320933233
+"319","Bread, Cookies, Jammie Dodgers",1,0.000107515320933233
+"320","Bread, Crisps, Juice, Coffee, Hot chocolate, Truffles",1,0.000107515320933233
+"321","Bread, Farm House, Coke",1,0.000107515320933233
+"322","Bread, Focaccia, Medialuna, Cookies, Coffee",1,0.000107515320933233
+"323","Bread, Focaccia, Scandinavian",1,0.000107515320933233
+"324","Bread, Focaccia, Tea, Coffee",1,0.000107515320933233
+"325","Bread, Fudge",1,0.000107515320933233
+"326","Bread, Granola",1,0.000107515320933233
+"327","Bread, Granola, Pastry",1,0.000107515320933233
+"328","Bread, Hot chocolate",1,0.000107515320933233
+"329","Bread, Hot chocolate, Hot chocolate",1,0.000107515320933233
+"330","Bread, Hot chocolate, Hot chocolate, Drinking chocolate spoons, Muffin, Pastry",1,0.000107515320933233
+"331","Bread, Hot chocolate, Muffin, Smoothies",1,0.000107515320933233
+"332","Bread, Hot chocolate, Tshirt",1,0.000107515320933233
+"333","Bread, Jam, Jam, Fudge, Fudge",1,0.000107515320933233
+"334","Bread, Jam, Scone",1,0.000107515320933233
+"335","Bread, Jammie Dodgers, Hot chocolate, Bread, Bread",1,0.000107515320933233
+"336","Bread, Jammie Dodgers, Tea, Coffee",1,0.000107515320933233
+"337","Bread, Juice, Coffee, The Nomad, Sandwich",1,0.000107515320933233
+"338","Bread, Juice, Sandwich, Sandwich, Cookies, Alfajores",1,0.000107515320933233
+"339","Bread, Keeping It Local, Cake",1,0.000107515320933233
+"340","Bread, Medialuna, Alfajores",1,0.000107515320933233
+"341","Bread, Medialuna, Bread",1,0.000107515320933233
+"342","Bread, Medialuna, Coffee",1,0.000107515320933233
+"343","Bread, Medialuna, Pastry",1,0.000107515320933233
+"344","Bread, Muffin, Bread, Tea",1,0.000107515320933233
+"345","Bread, Muffin, Coffee",1,0.000107515320933233
+"346","Bread, Muffin, Coke, Sandwich, Tea, Farm House",1,0.000107515320933233
+"347","Bread, Muffin, Tea, Soup",1,0.000107515320933233
+"348","Bread, Pastry, Coffee, Eggs",1,0.000107515320933233
+"349","Bread, Pastry, Honey",1,0.000107515320933233
+"350","Bread, Pastry, Hot chocolate, Coffee",1,0.000107515320933233
+"351","Bread, Pastry, Medialuna",1,0.000107515320933233
+"352","Bread, Pastry, Medialuna, Coffee",1,0.000107515320933233
+"353","Bread, Pastry, Pastry",1,0.000107515320933233
+"354","Bread, Pastry, The Nomad, Bread, Bread",1,0.000107515320933233
+"355","Bread, Salad, Spanish Brunch, Jam",1,0.000107515320933233
+"356","Bread, Sandwich, Coffee",1,0.000107515320933233
+"357","Bread, Sandwich, Tea",1,0.000107515320933233
+"358","Bread, Scandinavian, Coffee",1,0.000107515320933233
+"359","Bread, Scandinavian, Fudge, Granola, Pastry, Coffee",1,0.000107515320933233
+"360","Bread, Scandinavian, Medialuna",1,0.000107515320933233
+"361","Bread, Scone, Juice",1,0.000107515320933233
+"362","Bread, Scone, Pastry, Cake, Bread",1,0.000107515320933233
+"363","Bread, Smoothies, Coffee, Muffin, Sandwich",1,0.000107515320933233
+"364","Bread, Tea, Bakewell, Alfajores",1,0.000107515320933233
+"365","Bread, Tea, Cake, Bread, Chicken Stew",1,0.000107515320933233
+"366","Bread, Tea, Chicken Stew, Soup, Cake, Pastry, Alfajores, Focaccia",1,0.000107515320933233
+"367","Bread, Tea, Coffee, Alfajores, Hot chocolate",1,0.000107515320933233
+"368","Bread, Tea, Frittata",1,0.000107515320933233
+"369","Bread, Tea, Juice",1,0.000107515320933233
+"370","Bread, Tea, Toast, Cake",1,0.000107515320933233
+"371","Bread, Tiffin, Coffee",1,0.000107515320933233
+"372","Bread, Truffles, Coffee, Truffles, Scandinavian",1,0.000107515320933233
+"373","Bread, Victorian Sponge",1,0.000107515320933233
+"374","Brownie, Alfajores, Coffee, Bread",1,0.000107515320933233
+"375","Brownie, Alfajores, Hot chocolate, Tea, Bread",1,0.000107515320933233
+"376","Brownie, Bakewell, Bread, Coffee",1,0.000107515320933233
+"377","Brownie, Bread, Coffee",1,0.000107515320933233
+"378","Brownie, Bread, Hot chocolate",1,0.000107515320933233
+"379","Brownie, Coffee, Bread",1,0.000107515320933233
+"380","Brownie, Drinking chocolate spoons, Bread, Coffee, Sandwich, Sandwich",1,0.000107515320933233
+"381","Brownie, Medialuna, Coffee",1,0.000107515320933233
+"382","Brownie, Tea",1,0.000107515320933233
+"383","Brownie, Tea, Coffee",1,0.000107515320933233
+"384","Cake, Alfajores",1,0.000107515320933233
+"385","Cake, Alfajores, Coffee, Tea",1,0.000107515320933233
+"386","Cake, Bread, Coffee, Coffee",1,0.000107515320933233
+"387","Cake, Bread, Coffee, Coffee, Baguette",1,0.000107515320933233
+"388","Cake, Bread, Jammie Dodgers, Coffee, Tea, Coffee",1,0.000107515320933233
+"389","Cake, Bread, Tea",1,0.000107515320933233
+"390","Cake, Brownie",1,0.000107515320933233
+"391","Cake, Brownie, Mineral water, Coffee, Tea, Hot chocolate",1,0.000107515320933233
+"392","Cake, Cake, Coffee granules",1,0.000107515320933233
+"393","Cake, Cake, Coffee, Smoothies, Tea",1,0.000107515320933233
+"394","Cake, Coffee, Coffee",1,0.000107515320933233
+"395","Cake, Coffee, Coffee, Coffee",1,0.000107515320933233
+"396","Cake, Coffee, Coffee, Juice, Soup",1,0.000107515320933233
+"397","Cake, Coffee, Juice",1,0.000107515320933233
+"398","Cake, Cookies, Tea, Coffee, Sandwich, Soup",1,0.000107515320933233
+"399","Cake, Frittata",1,0.000107515320933233
+"400","Cake, Juice",1,0.000107515320933233
+"401","Cake, Mineral water, Alfajores, Coffee, Coffee",1,0.000107515320933233
+"402","Cake, Muffin",1,0.000107515320933233
+"403","Cake, Pastry, Bread, Bread",1,0.000107515320933233
+"404","Cake, Pastry, Pastry, Alfajores, Alfajores, Coffee, Bread",1,0.000107515320933233
+"405","Cake, Sandwich, Sandwich, Coffee",1,0.000107515320933233
+"406","Cake, Tea, Coffee",1,0.000107515320933233
+"407","Cake, Tea, Muffin, Coffee",1,0.000107515320933233
+"408","Cake, Vegan mincepie, Coffee, Coffee, Mineral water, Mineral water",1,0.000107515320933233
+"409","Cake, Victorian Sponge, Scandinavian",1,0.000107515320933233
+"410","Chicken Stew, Art Tray, Pastry, Truffles, Coffee, Coke, Bread",1,0.000107515320933233
+"411","Chicken Stew, Coffee",1,0.000107515320933233
+"412","Chicken Stew, Coffee, Bread",1,0.000107515320933233
+"413","Chicken Stew, Soup, Bread",1,0.000107515320933233
+"414","Coffee, Alfajores, Alfajores, Coke",1,0.000107515320933233
+"415","Coffee, Alfajores, Muffin, Coffee",1,0.000107515320933233
+"416","Coffee, Alfajores, Spanish Brunch",1,0.000107515320933233
+"417","Coffee, Alfajores, Tea",1,0.000107515320933233
+"418","Coffee, Art Tray",1,0.000107515320933233
+"419","Coffee, Bakewell",1,0.000107515320933233
+"420","Coffee, Bakewell, Pastry, Juice, Hot chocolate",1,0.000107515320933233
+"421","Coffee, Basket",1,0.000107515320933233
+"422","Coffee, Bread, Bread, Alfajores",1,0.000107515320933233
+"423","Coffee, Bread, Bread, Bread",1,0.000107515320933233
+"424","Coffee, Bread, Cake, Cake",1,0.000107515320933233
+"425","Coffee, Bread, Cake, Juice, Spanish Brunch, Salad, Extra Salami or Feta",1,0.000107515320933233
+"426","Coffee, Bread, Cake, Tiffin",1,0.000107515320933233
+"427","Coffee, Bread, Chicken Stew, Soup, Bread",1,0.000107515320933233
+"428","Coffee, Bread, Coffee",1,0.000107515320933233
+"429","Coffee, Bread, Coffee, Bread, Cookies",1,0.000107515320933233
+"430","Coffee, Bread, Coffee, Medialuna, Muffin, Scandinavian",1,0.000107515320933233
+"431","Coffee, Bread, Cookies",1,0.000107515320933233
+"432","Coffee, Bread, Cookies, Brownie",1,0.000107515320933233
+"433","Coffee, Bread, Cookies, Cake",1,0.000107515320933233
+"434","Coffee, Bread, Cookies, Juice",1,0.000107515320933233
+"435","Coffee, Bread, Empanadas, Medialuna",1,0.000107515320933233
+"436","Coffee, Bread, Frittata",1,0.000107515320933233
+"437","Coffee, Bread, Juice, Truffles, Frittata, Cookies, Crisps",1,0.000107515320933233
+"438","Coffee, Bread, Mineral water, Toast",1,0.000107515320933233
+"439","Coffee, Bread, Muffin, Baguette",1,0.000107515320933233
+"440","Coffee, Bread, Muffin, Cake",1,0.000107515320933233
+"441","Coffee, Bread, Pastry, Alfajores",1,0.000107515320933233
+"442","Coffee, Bread, Pastry, Farm House",1,0.000107515320933233
+"443","Coffee, Bread, Pastry, Medialuna",1,0.000107515320933233
+"444","Coffee, Bread, Soup, Sandwich",1,0.000107515320933233
+"445","Coffee, Bread, Spanish Brunch",1,0.000107515320933233
+"446","Coffee, Bread, Tartine",1,0.000107515320933233
+"447","Coffee, Bread, Tea",1,0.000107515320933233
+"448","Coffee, Bread, Tea, Pastry, Cake",1,0.000107515320933233
+"449","Coffee, Bread, Tea, Pastry, Muffin",1,0.000107515320933233
+"450","Coffee, Bread, Tea, Pastry, Tiffin, Cake",1,0.000107515320933233
+"451","Coffee, Bread, Toast, Pastry",1,0.000107515320933233
+"452","Coffee, Bread, Truffles",1,0.000107515320933233
+"453","Coffee, Brownie, Cookies",1,0.000107515320933233
+"454","Coffee, Brownie, Hearty & Seasonal, Soup",1,0.000107515320933233
+"455","Coffee, Brownie, Soup",1,0.000107515320933233
+"456","Coffee, Cake, Alfajores, Tea, Tea",1,0.000107515320933233
+"457","Coffee, Cake, Cake",1,0.000107515320933233
+"458","Coffee, Cake, Cake, Toast, Juice",1,0.000107515320933233
+"459","Coffee, Cake, Muffin",1,0.000107515320933233
+"460","Coffee, Chicken Stew, Toast",1,0.000107515320933233
+"461","Coffee, Coffee, Alfajores, Pastry",1,0.000107515320933233
+"462","Coffee, Coffee, Art Tray, Sandwich, Bread",1,0.000107515320933233
+"463","Coffee, Coffee, Bakewell",1,0.000107515320933233
+"464","Coffee, Coffee, Bakewell, Cake",1,0.000107515320933233
+"465","Coffee, Coffee, Bakewell, Medialuna",1,0.000107515320933233
+"466","Coffee, Coffee, Bread, Alfajores, Alfajores, Pastry",1,0.000107515320933233
+"467","Coffee, Coffee, Bread, Cookies",1,0.000107515320933233
+"468","Coffee, Coffee, Bread, Hot chocolate, Cake, Cake, Vegan mincepie, Bread",1,0.000107515320933233
+"469","Coffee, Coffee, Bread, Muffin",1,0.000107515320933233
+"470","Coffee, Coffee, Bread, Tea, Alfajores, Medialuna, Pastry, Jam",1,0.000107515320933233
+"471","Coffee, Coffee, Brownie, Truffles",1,0.000107515320933233
+"472","Coffee, Coffee, Cake, Bread",1,0.000107515320933233
+"473","Coffee, Coffee, Cake, Cake, Salad, Extra Salami or Feta, Scandinavian, Bread",1,0.000107515320933233
+"474","Coffee, Coffee, Cake, Cookies",1,0.000107515320933233
+"475","Coffee, Coffee, Cake, Frittata",1,0.000107515320933233
+"476","Coffee, Coffee, Cake, Muffin",1,0.000107515320933233
+"477","Coffee, Coffee, Cake, Sandwich, Sandwich",1,0.000107515320933233
+"478","Coffee, Coffee, Cake, Scone",1,0.000107515320933233
+"479","Coffee, Coffee, Chicken Stew, Extra Salami or Feta",1,0.000107515320933233
+"480","Coffee, Coffee, Chicken Stew, Salad",1,0.000107515320933233
+"481","Coffee, Coffee, Chicken Stew, Soup, Sandwich",1,0.000107515320933233
+"482","Coffee, Coffee, Coffee",1,0.000107515320933233
+"483","Coffee, Coffee, Coffee, Alfajores",1,0.000107515320933233
+"484","Coffee, Coffee, Coffee, Alfajores, Brownie",1,0.000107515320933233
+"485","Coffee, Coffee, Coffee, Bread, Cake",1,0.000107515320933233
+"486","Coffee, Coffee, Coffee, Bread, Cookies, Alfajores, Sandwich, Sandwich",1,0.000107515320933233
+"487","Coffee, Coffee, Coffee, Bread, Pastry, Alfajores",1,0.000107515320933233
+"488","Coffee, Coffee, Coffee, Brownie",1,0.000107515320933233
+"489","Coffee, Coffee, Coffee, Cookies, Cookies",1,0.000107515320933233
+"490","Coffee, Coffee, Coffee, Sandwich, NONE",1,0.000107515320933233
+"491","Coffee, Coffee, Coffee, Soup, Sandwich, Cake",1,0.000107515320933233
+"492","Coffee, Coffee, Coffee, Tea, Cake, Scone, Sandwich, Sandwich",1,0.000107515320933233
+"493","Coffee, Coffee, Coffee, Tea, Coke, Tiffin, Medialuna, Bread, Soup, Chicken Stew, Sandwich",1,0.000107515320933233
+"494","Coffee, Coffee, Coffee, Tea, Toast, Duck egg, Extra Salami or Feta, Chicken Stew, Cookies, Brownie, Bread",1,0.000107515320933233
+"495","Coffee, Coffee, Coffee, Toast, Cookies",1,0.000107515320933233
+"496","Coffee, Coffee, Coffee, Toast, Salad",1,0.000107515320933233
+"497","Coffee, Coffee, Cookies, Scone",1,0.000107515320933233
+"498","Coffee, Coffee, Extra Salami or Feta, Bread",1,0.000107515320933233
+"499","Coffee, Coffee, Fudge, Bread",1,0.000107515320933233
+"500","Coffee, Coffee, Granola, Bread",1,0.000107515320933233
+"501","Coffee, Coffee, Hearty & Seasonal, Soup",1,0.000107515320933233
+"502","Coffee, Coffee, Hot chocolate",1,0.000107515320933233
+"503","Coffee, Coffee, Hot chocolate, Bread, Pastry, Medialuna",1,0.000107515320933233
+"504","Coffee, Coffee, Hot chocolate, Cake, Cake",1,0.000107515320933233
+"505","Coffee, Coffee, Hot chocolate, Coffee, Cake, Medialuna",1,0.000107515320933233
+"506","Coffee, Coffee, Hot chocolate, Hot chocolate, Cookies, Sandwich",1,0.000107515320933233
+"507","Coffee, Coffee, Jammie Dodgers, Alfajores, Juice",1,0.000107515320933233
+"508","Coffee, Coffee, Juice, Cake, Cookies",1,0.000107515320933233
+"509","Coffee, Coffee, Juice, Extra Salami or Feta, Salad, Toast",1,0.000107515320933233
+"510","Coffee, Coffee, Juice, Farm House",1,0.000107515320933233
+"511","Coffee, Coffee, Juice, Sandwich, Cake, Bread, Lemon and coconut",1,0.000107515320933233
+"512","Coffee, Coffee, Keeping It Local, Bread",1,0.000107515320933233
+"513","Coffee, Coffee, Medialuna, Cake, Tiffin",1,0.000107515320933233
+"514","Coffee, Coffee, Medialuna, Cookies, Tiffin, Toast",1,0.000107515320933233
+"515","Coffee, Coffee, Medialuna, Medialuna, Bread",1,0.000107515320933233
+"516","Coffee, Coffee, Muffin",1,0.000107515320933233
+"517","Coffee, Coffee, Muffin, Brownie",1,0.000107515320933233
+"518","Coffee, Coffee, Muffin, Sandwich",1,0.000107515320933233
+"519","Coffee, Coffee, Pastry, Bread",1,0.000107515320933233
+"520","Coffee, Coffee, Pastry, Cake",1,0.000107515320933233
+"521","Coffee, Coffee, Pastry, Toast",1,0.000107515320933233
+"522","Coffee, Coffee, Salad",1,0.000107515320933233
+"523","Coffee, Coffee, Sandwich, Chicken Stew",1,0.000107515320933233
+"524","Coffee, Coffee, Sandwich, Hearty & Seasonal",1,0.000107515320933233
+"525","Coffee, Coffee, Sandwich, Sandwich, Alfajores, Alfajores",1,0.000107515320933233
+"526","Coffee, Coffee, Scandinavian",1,0.000107515320933233
+"527","Coffee, Coffee, Soup, Bread",1,0.000107515320933233
+"528","Coffee, Coffee, Spanish Brunch, Sandwich",1,0.000107515320933233
+"529","Coffee, Coffee, Tartine, Medialuna, Pastry",1,0.000107515320933233
+"530","Coffee, Coffee, Tea, Bread",1,0.000107515320933233
+"531","Coffee, Coffee, Tea, Cake, Medialuna",1,0.000107515320933233
+"532","Coffee, Coffee, Tea, Cake, Scone, Cookies",1,0.000107515320933233
+"533","Coffee, Coffee, Tea, Salad, Spanish Brunch",1,0.000107515320933233
+"534","Coffee, Coffee, Tea, Scone",1,0.000107515320933233
+"535","Coffee, Coffee, Tea, Tea, Soup, Chicken Stew, Cake, Cake",1,0.000107515320933233
+"536","Coffee, Coffee, The Nomad",1,0.000107515320933233
+"537","Coffee, Coffee, Tiffin, Alfajores",1,0.000107515320933233
+"538","Coffee, Coffee, Tiffin, Muffin, Sandwich, Sandwich",1,0.000107515320933233
+"539","Coffee, Coffee, Toast, Extra Salami or Feta, Cake",1,0.000107515320933233
+"540","Coffee, Coffee, Toast, Pastry",1,0.000107515320933233
+"541","Coffee, Coffee, Toast, Pastry, Scone",1,0.000107515320933233
+"542","Coffee, Coffee, Toast, Sandwich",1,0.000107515320933233
+"543","Coffee, Coffee, Toast, Scandinavian",1,0.000107515320933233
+"544","Coffee, Coffee, Vegan mincepie",1,0.000107515320933233
+"545","Coffee, Coke, Coffee",1,0.000107515320933233
+"546","Coffee, Coke, Juice, Truffles, Medialuna",1,0.000107515320933233
+"547","Coffee, Coke, Mineral water, Bread, Brownie",1,0.000107515320933233
+"548","Coffee, Coke, Salad",1,0.000107515320933233
+"549","Coffee, Coke, Sandwich, Soup",1,0.000107515320933233
+"550","Coffee, Coke, Soup",1,0.000107515320933233
+"551","Coffee, Coke, Tea, Sandwich, Spanish Brunch",1,0.000107515320933233
+"552","Coffee, Cookies, Bread",1,0.000107515320933233
+"553","Coffee, Cookies, Cake",1,0.000107515320933233
+"554","Coffee, Cookies, Extra Salami or Feta",1,0.000107515320933233
+"555","Coffee, Cookies, Jammie Dodgers, Cake, Tiffin",1,0.000107515320933233
+"556","Coffee, Cookies, Tartine",1,0.000107515320933233
+"557","Coffee, Cookies, Tea",1,0.000107515320933233
+"558","Coffee, Duck egg",1,0.000107515320933233
+"559","Coffee, Empanadas, Soup",1,0.000107515320933233
+"560","Coffee, Focaccia, Coffee, Medialuna, Bread",1,0.000107515320933233
+"561","Coffee, Frittata",1,0.000107515320933233
+"562","Coffee, Granola, Bread",1,0.000107515320933233
+"563","Coffee, Hearty & Seasonal",1,0.000107515320933233
+"564","Coffee, Hearty & Seasonal, Keeping It Local",1,0.000107515320933233
+"565","Coffee, Hot chocolate, Bread, Cake, Sandwich",1,0.000107515320933233
+"566","Coffee, Hot chocolate, Bread, Pastry",1,0.000107515320933233
+"567","Coffee, Hot chocolate, Brownie, Bread",1,0.000107515320933233
+"568","Coffee, Hot chocolate, Cake, Bread",1,0.000107515320933233
+"569","Coffee, Hot chocolate, Cake, Cake",1,0.000107515320933233
+"570","Coffee, Hot chocolate, Coffee, Bread, Cake",1,0.000107515320933233
+"571","Coffee, Hot chocolate, Coffee, Medialuna, Jammie Dodgers",1,0.000107515320933233
+"572","Coffee, Hot chocolate, Farm House",1,0.000107515320933233
+"573","Coffee, Hot chocolate, Muffin",1,0.000107515320933233
+"574","Coffee, Hot chocolate, Pastry, Bread",1,0.000107515320933233
+"575","Coffee, Hot chocolate, Pastry, Cake",1,0.000107515320933233
+"576","Coffee, Hot chocolate, Pastry, Jam",1,0.000107515320933233
+"577","Coffee, Hot chocolate, Tiffin, Bread",1,0.000107515320933233
+"578","Coffee, Hot chocolate, Toast, Sandwich, Soup, Cake",1,0.000107515320933233
+"579","Coffee, Hot chocolate, Vegan mincepie",1,0.000107515320933233
+"580","Coffee, Hot chocolate, Vegan mincepie, Jammie Dodgers",1,0.000107515320933233
+"581","Coffee, Jam",1,0.000107515320933233
+"582","Coffee, Jam, Jam",1,0.000107515320933233
+"583","Coffee, Jammie Dodgers, Art Tray",1,0.000107515320933233
+"584","Coffee, Jammie Dodgers, Brownie, Hot chocolate, Hot chocolate",1,0.000107515320933233
+"585","Coffee, Jammie Dodgers, Sandwich",1,0.000107515320933233
+"586","Coffee, Juice, Alfajores",1,0.000107515320933233
+"587","Coffee, Juice, Bakewell",1,0.000107515320933233
+"588","Coffee, Juice, Bread",1,0.000107515320933233
+"589","Coffee, Juice, Brownie, Alfajores",1,0.000107515320933233
+"590","Coffee, Juice, Cake, Cake",1,0.000107515320933233
+"591","Coffee, Juice, Cookies, Bread",1,0.000107515320933233
+"592","Coffee, Juice, Jammie Dodgers, Cookies",1,0.000107515320933233
+"593","Coffee, Juice, NONE",1,0.000107515320933233
+"594","Coffee, Juice, Sandwich, Crisps",1,0.000107515320933233
+"595","Coffee, Juice, Tea, Muffin, Sandwich",1,0.000107515320933233
+"596","Coffee, Keeping It Local, Tea",1,0.000107515320933233
+"597","Coffee, Kids biscuit",1,0.000107515320933233
+"598","Coffee, Medialuna, Alfajores",1,0.000107515320933233
+"599","Coffee, Medialuna, Bread",1,0.000107515320933233
+"600","Coffee, Medialuna, Bread, Eggs",1,0.000107515320933233
+"601","Coffee, Medialuna, Cake",1,0.000107515320933233
+"602","Coffee, Medialuna, Cookies",1,0.000107515320933233
+"603","Coffee, Medialuna, Hot chocolate",1,0.000107515320933233
+"604","Coffee, Mineral water",1,0.000107515320933233
+"605","Coffee, Mineral water, Alfajores, Cake, Sandwich",1,0.000107515320933233
+"606","Coffee, Mineral water, Cookies, Toast",1,0.000107515320933233
+"607","Coffee, Mineral water, Juice, Soup",1,0.000107515320933233
+"608","Coffee, Muesli",1,0.000107515320933233
+"609","Coffee, Nomad bag",1,0.000107515320933233
+"610","Coffee, Pastry, Alfajores, Farm House",1,0.000107515320933233
+"611","Coffee, Pastry, Brownie",1,0.000107515320933233
+"612","Coffee, Pastry, Coffee",1,0.000107515320933233
+"613","Coffee, Pastry, Farm House",1,0.000107515320933233
+"614","Coffee, Pastry, Jam",1,0.000107515320933233
+"615","Coffee, Pastry, Juice",1,0.000107515320933233
+"616","Coffee, Pastry, Muffin, Coke",1,0.000107515320933233
+"617","Coffee, Pastry, Pastry",1,0.000107515320933233
+"618","Coffee, Pastry, Tea",1,0.000107515320933233
+"619","Coffee, Pick and Mix Bowls",1,0.000107515320933233
+"620","Coffee, Salad, Extra Salami or Feta",1,0.000107515320933233
+"621","Coffee, Salad, Sandwich, Cake",1,0.000107515320933233
+"622","Coffee, Salad, Tiffin",1,0.000107515320933233
+"623","Coffee, Sandwich, Mineral water",1,0.000107515320933233
+"624","Coffee, Sandwich, Tea, Bread",1,0.000107515320933233
+"625","Coffee, Smoothies, Alfajores, Alfajores",1,0.000107515320933233
+"626","Coffee, Smoothies, Cookies, Medialuna, Scone",1,0.000107515320933233
+"627","Coffee, Smoothies, Frittata",1,0.000107515320933233
+"628","Coffee, Smoothies, Soup, Sandwich, Cake",1,0.000107515320933233
+"629","Coffee, Soup, Sandwich, Cake",1,0.000107515320933233
+"630","Coffee, Spanish Brunch, Bread",1,0.000107515320933233
+"631","Coffee, Spanish Brunch, Coffee, Toast, Sandwich, Bread",1,0.000107515320933233
+"632","Coffee, Spanish Brunch, The Nomad, Brownie, Cookies",1,0.000107515320933233
+"633","Coffee, Spanish Brunch, The Nomad, Cake, Tiffin",1,0.000107515320933233
+"634","Coffee, Tartine, Coffee, Pick and Mix Bowls, Jam",1,0.000107515320933233
+"635","Coffee, Tea, Art Tray, Cookies",1,0.000107515320933233
+"636","Coffee, Tea, Bread, Cake",1,0.000107515320933233
+"637","Coffee, Tea, Bread, Fudge, Jam",1,0.000107515320933233
+"638","Coffee, Tea, Bread, Tiffin, Chicken Stew",1,0.000107515320933233
+"639","Coffee, Tea, Brownie",1,0.000107515320933233
+"640","Coffee, Tea, Brownie, Farm House",1,0.000107515320933233
+"641","Coffee, Tea, Cake, Medialuna",1,0.000107515320933233
+"642","Coffee, Tea, Cake, Scone",1,0.000107515320933233
+"643","Coffee, Tea, Cake, Toast",1,0.000107515320933233
+"644","Coffee, Tea, Chicken Stew",1,0.000107515320933233
+"645","Coffee, Tea, Coffee",1,0.000107515320933233
+"646","Coffee, Tea, Cookies, Cake",1,0.000107515320933233
+"647","Coffee, Tea, Farm House, Brownie",1,0.000107515320933233
+"648","Coffee, Tea, Hot chocolate",1,0.000107515320933233
+"649","Coffee, Tea, Hot chocolate, Brownie, Alfajores, Bread",1,0.000107515320933233
+"650","Coffee, Tea, Keeping It Local",1,0.000107515320933233
+"651","Coffee, Tea, Medialuna",1,0.000107515320933233
+"652","Coffee, Tea, Muffin, Muffin",1,0.000107515320933233
+"653","Coffee, Tea, Sandwich, Chicken Stew",1,0.000107515320933233
+"654","Coffee, Tea, Sandwich, Medialuna",1,0.000107515320933233
+"655","Coffee, Tea, Sandwich, Medialuna, Bread",1,0.000107515320933233
+"656","Coffee, Tea, Sandwich, Muffin",1,0.000107515320933233
+"657","Coffee, Tea, Scone",1,0.000107515320933233
+"658","Coffee, Tea, Scone, Cake",1,0.000107515320933233
+"659","Coffee, Tea, Smoothies, Spanish Brunch, The Nomad",1,0.000107515320933233
+"660","Coffee, Tea, Soup",1,0.000107515320933233
+"661","Coffee, Tea, Soup, Bread",1,0.000107515320933233
+"662","Coffee, Tea, Tiffin",1,0.000107515320933233
+"663","Coffee, Tea, Toast, Brownie",1,0.000107515320933233
+"664","Coffee, Tea, Truffles",1,0.000107515320933233
+"665","Coffee, Tiffin, Bread",1,0.000107515320933233
+"666","Coffee, Tiffin, Scone, Bread",1,0.000107515320933233
+"667","Coffee, Toast, Coffee",1,0.000107515320933233
+"668","Coffee, Toast, Scandinavian",1,0.000107515320933233
+"669","Coffee, Toast, Tea",1,0.000107515320933233
+"670","Coffee, Truffles, Bread",1,0.000107515320933233
+"671","Coffee, Truffles, NONE",1,0.000107515320933233
+"672","Coffee, Truffles, Pastry",1,0.000107515320933233
+"673","Coffee, Vegan mincepie",1,0.000107515320933233
+"674","Coffee, Vegan mincepie, Pastry",1,0.000107515320933233
+"675","Coke, Coffee, Coffee, Hot chocolate",1,0.000107515320933233
+"676","Coke, Coffee, Juice",1,0.000107515320933233
+"677","Coke, Coffee, Medialuna, Cake",1,0.000107515320933233
+"678","Coke, Coffee, Sandwich, Muffin",1,0.000107515320933233
+"679","Coke, Juice, Truffles, Salad, Coffee, Cake, Sandwich, Chicken Stew, Alfajores",1,0.000107515320933233
+"680","Coke, Tea",1,0.000107515320933233
+"681","Cookies, Bread, Farm House",1,0.000107515320933233
+"682","Cookies, Brownie, Coffee",1,0.000107515320933233
+"683","Cookies, Cake, Coffee, My-5 Fruit Shoot",1,0.000107515320933233
+"684","Cookies, Coffee",1,0.000107515320933233
+"685","Cookies, Coffee, Coffee",1,0.000107515320933233
+"686","Cookies, Coffee, Pastry",1,0.000107515320933233
+"687","Cookies, Cookies, Coffee, Coke",1,0.000107515320933233
+"688","Cookies, Cookies, Spanish Brunch, Toast, Coffee, Bread",1,0.000107515320933233
+"689","Cookies, Hot chocolate, Tea, Cake, Pastry",1,0.000107515320933233
+"690","Cookies, Juice, Coffee, Coffee",1,0.000107515320933233
+"691","Cookies, My-5 Fruit Shoot, Coffee, Keeping It Local",1,0.000107515320933233
+"692","Cookies, Sandwich, Coffee, Coffee",1,0.000107515320933233
+"693","Duck egg",1,0.000107515320933233
+"694","Duck egg, Spanish Brunch, Coffee",1,0.000107515320933233
+"695","Dulce de Leche, Bread, Coffee, Pastry, Bread",1,0.000107515320933233
+"696","Ella's Kitchen Pouches, Juice, Bread, Muffin, Jam",1,0.000107515320933233
+"697","Empanadas, Bread, Scandinavian",1,0.000107515320933233
+"698","Farm House, Baguette",1,0.000107515320933233
+"699","Farm House, Bread",1,0.000107515320933233
+"700","Farm House, Bread, Cake",1,0.000107515320933233
+"701","Farm House, Bread, Muffin",1,0.000107515320933233
+"702","Farm House, Cake",1,0.000107515320933233
+"703","Farm House, Coffee granules",1,0.000107515320933233
+"704","Farm House, Coffee, Coffee, Muffin, Brownie",1,0.000107515320933233
+"705","Farm House, Coffee, Hot chocolate",1,0.000107515320933233
+"706","Farm House, Farm House",1,0.000107515320933233
+"707","Farm House, Frittata, Cookies",1,0.000107515320933233
+"708","Farm House, Hot chocolate, Coffee",1,0.000107515320933233
+"709","Farm House, Medialuna, Coffee",1,0.000107515320933233
+"710","Farm House, Scandinavian, Coffee, Toast, Cake",1,0.000107515320933233
+"711","Farm House, Soup, Salad, Spanish Brunch, Toast, Coffee, Coffee",1,0.000107515320933233
+"712","Farm House, Tea",1,0.000107515320933233
+"713","Frittata, Cake",1,0.000107515320933233
+"714","Frittata, Coffee",1,0.000107515320933233
+"715","Frittata, Coffee, Brownie",1,0.000107515320933233
+"716","Frittata, Muffin, Coffee",1,0.000107515320933233
+"717","Frittata, Tea, Tea",1,0.000107515320933233
+"718","Fudge, Coffee, Coffee, Sandwich",1,0.000107515320933233
+"719","Fudge, Coffee, Sandwich",1,0.000107515320933233
+"720","Fudge, Jam, Cake, Coffee",1,0.000107515320933233
+"721","Fudge, Scandinavian",1,0.000107515320933233
+"722","Fudge, Tea, Coffee, Muffin",1,0.000107515320933233
+"723","Gingerbread syrup, Coffee",1,0.000107515320933233
+"724","Granola, Coffee",1,0.000107515320933233
+"725","Half slice Monster, Juice, Cookies, Coffee",1,0.000107515320933233
+"726","Hearty & Seasonal, Cake, Coffee",1,0.000107515320933233
+"727","Hearty & Seasonal, Coffee",1,0.000107515320933233
+"728","Hearty & Seasonal, Coffee, Cake",1,0.000107515320933233
+"729","Hearty & Seasonal, Coffee, Coffee",1,0.000107515320933233
+"730","Hearty & Seasonal, Coffee, Muffin, Scandinavian",1,0.000107515320933233
+"731","Hearty & Seasonal, Mineral water, Muffin",1,0.000107515320933233
+"732","Hearty & Seasonal, Sandwich, Bread, Muffin, Brownie",1,0.000107515320933233
+"733","Hearty & Seasonal, Soup, Bread, Coffee",1,0.000107515320933233
+"734","Hearty & Seasonal, Tea",1,0.000107515320933233
+"735","Hearty & Seasonal, Tea, Farm House",1,0.000107515320933233
+"736","Hot chocolate, Bread, Bread, Jam, Christmas common",1,0.000107515320933233
+"737","Hot chocolate, Bread, Muffin",1,0.000107515320933233
+"738","Hot chocolate, Bread, Pastry, Pastry",1,0.000107515320933233
+"739","Hot chocolate, Bread, Scone",1,0.000107515320933233
+"740","Hot chocolate, Cake, Bread",1,0.000107515320933233
+"741","Hot chocolate, Coffee, Bread, Bread, Vegan mincepie",1,0.000107515320933233
+"742","Hot chocolate, Coffee, Bread, Scandinavian, Cookies",1,0.000107515320933233
+"743","Hot chocolate, Coffee, Bread, Scone, Cookies, Hearty & Seasonal",1,0.000107515320933233
+"744","Hot chocolate, Coffee, Brownie, Muffin, Bread",1,0.000107515320933233
+"745","Hot chocolate, Coffee, Cake, Medialuna",1,0.000107515320933233
+"746","Hot chocolate, Coffee, Cake, Scone, Cookies, Bread",1,0.000107515320933233
+"747","Hot chocolate, Coffee, Coffee, Cake, Cookies",1,0.000107515320933233
+"748","Hot chocolate, Coffee, Coffee, Cookies",1,0.000107515320933233
+"749","Hot chocolate, Coffee, Coffee, Tea, Cake, Cake, Medialuna, Pastry, Farm House",1,0.000107515320933233
+"750","Hot chocolate, Coffee, Medialuna, Soup, Cake",1,0.000107515320933233
+"751","Hot chocolate, Coffee, Muffin, Sandwich",1,0.000107515320933233
+"752","Hot chocolate, Coffee, My-5 Fruit Shoot",1,0.000107515320933233
+"753","Hot chocolate, Coffee, Pastry",1,0.000107515320933233
+"754","Hot chocolate, Coffee, Pastry, Cookies",1,0.000107515320933233
+"755","Hot chocolate, Coffee, Sandwich, Cake",1,0.000107515320933233
+"756","Hot chocolate, Coffee, Sandwich, Toast, Cake",1,0.000107515320933233
+"757","Hot chocolate, Coffee, Scone",1,0.000107515320933233
+"758","Hot chocolate, Coffee, Tea, Alfajores, Pastry, Tiffin",1,0.000107515320933233
+"759","Hot chocolate, Coffee, Toast, Bread",1,0.000107515320933233
+"760","Hot chocolate, Hot chocolate, Bread, Coffee",1,0.000107515320933233
+"761","Hot chocolate, Hot chocolate, Coffee, Bread, Bread",1,0.000107515320933233
+"762","Hot chocolate, Hot chocolate, Coffee, Coffee, Coffee, Cookies, Cookies, Brownie, Pastry, Baguette",1,0.000107515320933233
+"763","Hot chocolate, Hot chocolate, Coffee, Toast",1,0.000107515320933233
+"764","Hot chocolate, Hot chocolate, Toast, Pastry",1,0.000107515320933233
+"765","Hot chocolate, Jam, Cookies",1,0.000107515320933233
+"766","Hot chocolate, Medialuna, Coffee",1,0.000107515320933233
+"767","Hot chocolate, Pastry, Bread",1,0.000107515320933233
+"768","Hot chocolate, Tea",1,0.000107515320933233
+"769","Hot chocolate, Tea, Alfajores, Medialuna, Medialuna",1,0.000107515320933233
+"770","Hot chocolate, Tea, Coffee, Coffee, Cake",1,0.000107515320933233
+"771","Hot chocolate, Tea, Pastry, Tiffin",1,0.000107515320933233
+"772","Hot chocolate, Tea, Truffles, Cake, Muffin",1,0.000107515320933233
+"773","Hot chocolate, Truffles",1,0.000107515320933233
+"774","Jam, Bread",1,0.000107515320933233
+"775","Jam, Bread, Scandinavian",1,0.000107515320933233
+"776","Jam, Cake, Bread, Coffee",1,0.000107515320933233
+"777","Jam, Coffee, Bread, Scone",1,0.000107515320933233
+"778","Jam, Coffee, Brownie",1,0.000107515320933233
+"779","Jam, Coffee, Farm House",1,0.000107515320933233
+"780","Jam, Coffee, Tartine, Pastry, Tea",1,0.000107515320933233
+"781","Jammie Dodgers, Cake, Coffee, Coffee",1,0.000107515320933233
+"782","Jammie Dodgers, Coffee, Bread",1,0.000107515320933233
+"783","Jammie Dodgers, My-5 Fruit Shoot, Bread",1,0.000107515320933233
+"784","Jammie Dodgers, Scone, Tiffin, Bread, Hot chocolate, Tea, Coffee",1,0.000107515320933233
+"785","Jammie Dodgers, Tiffin, Bread, Juice, Tea, Coffee",1,0.000107515320933233
+"786","Juice, Alfajores, Cookies, Pick and Mix Bowls, Mineral water",1,0.000107515320933233
+"787","Juice, Baguette",1,0.000107515320933233
+"788","Juice, Bread, Toast, Sandwich, Sandwich, Bakewell",1,0.000107515320933233
+"789","Juice, Brownie",1,0.000107515320933233
+"790","Juice, Cake, Coffee",1,0.000107515320933233
+"791","Juice, Chocolates, Hot chocolate, Coffee, Bread, Cookies",1,0.000107515320933233
+"792","Juice, Coffee",1,0.000107515320933233
+"793","Juice, Coffee, Bread, Toast",1,0.000107515320933233
+"794","Juice, Coffee, Coffee, Spanish Brunch, Bread",1,0.000107515320933233
+"795","Juice, Coffee, Cookies, Tea, Alfajores",1,0.000107515320933233
+"796","Juice, Coffee, Sandwich, Ella's Kitchen Pouches",1,0.000107515320933233
+"797","Juice, Cookies, Art Tray, Salad",1,0.000107515320933233
+"798","Juice, Cookies, Brownie, Alfajores, Coffee",1,0.000107515320933233
+"799","Juice, Cookies, Coffee",1,0.000107515320933233
+"800","Juice, Hot chocolate, Coffee, Tea, Pastry, Brownie",1,0.000107515320933233
+"801","Juice, Tartine, Coffee, Muffin",1,0.000107515320933233
+"802","Juice, Tiffin",1,0.000107515320933233
+"803","Juice, Toast, Sandwich, Sandwich, Tea, Coffee, Cookies, Cookies, Alfajores, Alfajores, Hot chocolate",1,0.000107515320933233
+"804","Keeping It Local, Coffee, Bread",1,0.000107515320933233
+"805","Keeping It Local, Coffee, Coffee",1,0.000107515320933233
+"806","Keeping It Local, Tea, Brownie, Bread",1,0.000107515320933233
+"807","Lemon and coconut",1,0.000107515320933233
+"808","Medialuna, Alfajores, Coffee, Tea",1,0.000107515320933233
+"809","Medialuna, Bread",1,0.000107515320933233
+"810","Medialuna, Bread, Cake, Muffin, Granola, Sandwich, Coffee, Hot chocolate, Tea",1,0.000107515320933233
+"811","Medialuna, Bread, Coffee, Coffee, Scandinavian",1,0.000107515320933233
+"812","Medialuna, Bread, Coffee, Pastry, Farm House",1,0.000107515320933233
+"813","Medialuna, Bread, Tea, Coffee",1,0.000107515320933233
+"814","Medialuna, Cake, Spanish Brunch, The Nomad, Cookies",1,0.000107515320933233
+"815","Medialuna, Coffee, Farm House",1,0.000107515320933233
+"816","Medialuna, Coffee, Hot chocolate, Bread, Scandinavian",1,0.000107515320933233
+"817","Medialuna, Coffee, Tea",1,0.000107515320933233
+"818","Medialuna, Dulce de Leche",1,0.000107515320933233
+"819","Medialuna, Fudge",1,0.000107515320933233
+"820","Medialuna, Hot chocolate, Bread, Coffee",1,0.000107515320933233
+"821","Medialuna, Medialuna, Coffee",1,0.000107515320933233
+"822","Medialuna, Medialuna, Hot chocolate, Coffee",1,0.000107515320933233
+"823","Medialuna, Medialuna, Pastry",1,0.000107515320933233
+"824","Medialuna, Muffin, Spanish Brunch, Chicken Stew, Coffee",1,0.000107515320933233
+"825","Medialuna, Pastry",1,0.000107515320933233
+"826","Medialuna, Pastry, Bread",1,0.000107515320933233
+"827","Medialuna, Pastry, Coffee",1,0.000107515320933233
+"828","Medialuna, Pastry, Coffee, Coffee, Bread",1,0.000107515320933233
+"829","Medialuna, Pastry, Coffee, Coffee, Toast",1,0.000107515320933233
+"830","Medialuna, Pastry, Coffee, Tea",1,0.000107515320933233
+"831","Medialuna, Pastry, Muffin",1,0.000107515320933233
+"832","Medialuna, Tea, Coffee",1,0.000107515320933233
+"833","Medialuna, The Nomad, Bread",1,0.000107515320933233
+"834","Mighty Protein, Hearty & Seasonal, Coffee, Coke",1,0.000107515320933233
+"835","Mineral water, Bread",1,0.000107515320933233
+"836","Mineral water, Coffee",1,0.000107515320933233
+"837","Mineral water, Coffee, Soup",1,0.000107515320933233
+"838","Mineral water, Hot chocolate, Cookies, Cake",1,0.000107515320933233
+"839","Mineral water, Scandinavian",1,0.000107515320933233
+"840","Muesli, The Nomad, Coffee, Bread",1,0.000107515320933233
+"841","Muffin, Bread",1,0.000107515320933233
+"842","Muffin, Cake, Coffee, Tea",1,0.000107515320933233
+"843","Muffin, Cake, Pastry, Tea, Coffee, Coffee",1,0.000107515320933233
+"844","Muffin, Cake, Scone",1,0.000107515320933233
+"845","Muffin, Hot chocolate, Coffee",1,0.000107515320933233
+"846","Muffin, Jammie Dodgers, Cake, Bread, Hot chocolate",1,0.000107515320933233
+"847","Muffin, Muffin, Brownie, Alfajores, Hot chocolate, Coffee, Coffee",1,0.000107515320933233
+"848","Muffin, Pastry, Coffee, Tea",1,0.000107515320933233
+"849","Muffin, Scandinavian",1,0.000107515320933233
+"850","Nomad bag",1,0.000107515320933233
+"851","Pastry, Bread, Brownie",1,0.000107515320933233
+"852","Pastry, Bread, Cake",1,0.000107515320933233
+"853","Pastry, Bread, Coffee",1,0.000107515320933233
+"854","Pastry, Bread, Cookies, Coffee, Bread",1,0.000107515320933233
+"855","Pastry, Bread, Jam",1,0.000107515320933233
+"856","Pastry, Cake, Bread, Coffee, Tea",1,0.000107515320933233
+"857","Pastry, Cake, Coffee",1,0.000107515320933233
+"858","Pastry, Cake, Coffee, Coffee",1,0.000107515320933233
+"859","Pastry, Coffee, Bread, Spanish Brunch",1,0.000107515320933233
+"860","Pastry, Coffee, Brownie",1,0.000107515320933233
+"861","Pastry, Coffee, Coffee, Bread",1,0.000107515320933233
+"862","Pastry, Coffee, Coffee, Muffin, Alfajores",1,0.000107515320933233
+"863","Pastry, Coffee, Soup, Sandwich",1,0.000107515320933233
+"864","Pastry, Coffee, Tea",1,0.000107515320933233
+"865","Pastry, Cookies, Coffee",1,0.000107515320933233
+"866","Pastry, Keeping It Local, Coffee, Hot chocolate",1,0.000107515320933233
+"867","Pastry, Medialuna, Coffee, Tea",1,0.000107515320933233
+"868","Pastry, Pastry, Bread, Sandwich, Coffee",1,0.000107515320933233
+"869","Pastry, Pastry, Coffee, Coffee, Bread",1,0.000107515320933233
+"870","Pastry, Tea, Alfajores",1,0.000107515320933233
+"871","Pick and Mix Bowls, Hearty & Seasonal, Hearty & Seasonal, Coffee, Smoothies, Coffee",1,0.000107515320933233
+"872","Pick and Mix Bowls, Jam, Soup, Brownie",1,0.000107515320933233
+"873","Salad, Sandwich, Bread, Coffee, Alfajores",1,0.000107515320933233
+"874","Salad, Soup, Cake",1,0.000107515320933233
+"875","Sandwich, Bread, Alfajores, Fudge",1,0.000107515320933233
+"876","Sandwich, Bread, Mineral water, Coffee, Juice",1,0.000107515320933233
+"877","Sandwich, Cake, Hot chocolate",1,0.000107515320933233
+"878","Sandwich, Chicken Stew, Coffee, Truffles, Coke",1,0.000107515320933233
+"879","Sandwich, Coffee, Brownie",1,0.000107515320933233
+"880","Sandwich, Coffee, Cake",1,0.000107515320933233
+"881","Sandwich, Coffee, Cake, Coffee, Sandwich",1,0.000107515320933233
+"882","Sandwich, Coffee, Coffee",1,0.000107515320933233
+"883","Sandwich, Coffee, Hot chocolate",1,0.000107515320933233
+"884","Sandwich, Coffee, Hot chocolate, Cookies, Crisps, Coffee",1,0.000107515320933233
+"885","Sandwich, Coffee, Scone",1,0.000107515320933233
+"886","Sandwich, Coffee, Tea",1,0.000107515320933233
+"887","Sandwich, Coffee, Tiffin, Cake",1,0.000107515320933233
+"888","Sandwich, Coke, Bread, Cake",1,0.000107515320933233
+"889","Sandwich, Cookies, Coffee, Tea",1,0.000107515320933233
+"890","Sandwich, Hearty & Seasonal, Coffee",1,0.000107515320933233
+"891","Sandwich, Mineral water, Bread, Coffee, Alfajores, Bread",1,0.000107515320933233
+"892","Sandwich, Salad, Bread, Juice",1,0.000107515320933233
+"893","Sandwich, Sandwich, Bread, Juice",1,0.000107515320933233
+"894","Sandwich, Sandwich, Coffee, Coffee",1,0.000107515320933233
+"895","Sandwich, Sandwich, Coffee, Coffee, Pastry, Scandinavian",1,0.000107515320933233
+"896","Sandwich, Sandwich, Coffee, Tea",1,0.000107515320933233
+"897","Sandwich, Sandwich, Coke, Smoothies, Bread, Coffee, Alfajores, Crisps",1,0.000107515320933233
+"898","Sandwich, Sandwich, Sandwich, Coke, Truffles, Coffee",1,0.000107515320933233
+"899","Sandwich, Sandwich, Tea, Coffee",1,0.000107515320933233
+"900","Sandwich, Sandwich, Truffles, Tea",1,0.000107515320933233
+"901","Sandwich, Scone, Bread, Coffee",1,0.000107515320933233
+"902","Sandwich, Soup, Bread, Tea",1,0.000107515320933233
+"903","Sandwich, Soup, Coffee, Alfajores",1,0.000107515320933233
+"904","Sandwich, Soup, Coffee, Tea",1,0.000107515320933233
+"905","Sandwich, Truffles, Coffee, Pastry",1,0.000107515320933233
+"906","Scandinavian, Coffee",1,0.000107515320933233
+"907","Scandinavian, Coffee, Alfajores",1,0.000107515320933233
+"908","Scandinavian, Coffee, Pastry",1,0.000107515320933233
+"909","Scandinavian, Coffee, Soup",1,0.000107515320933233
+"910","Scandinavian, Fudge",1,0.000107515320933233
+"911","Scandinavian, Keeping It Local, Tea, Coffee, Alfajores",1,0.000107515320933233
+"912","Scandinavian, Medialuna",1,0.000107515320933233
+"913","Scandinavian, Pastry, Hot chocolate, Coffee, Bread",1,0.000107515320933233
+"914","Scandinavian, Pastry, Juice",1,0.000107515320933233
+"915","Scandinavian, Scandinavian",1,0.000107515320933233
+"916","Scone, Bread",1,0.000107515320933233
+"917","Scone, Bread, Coffee, Hot chocolate",1,0.000107515320933233
+"918","Scone, Bread, Nomad bag, Coffee",1,0.000107515320933233
+"919","Scone, Bread, Spanish Brunch",1,0.000107515320933233
+"920","Scone, Bread, Tea, Coffee",1,0.000107515320933233
+"921","Scone, Cake, Coffee",1,0.000107515320933233
+"922","Scone, Cake, Tea, Tea",1,0.000107515320933233
+"923","Scone, Coffee, Coffee, Coffee",1,0.000107515320933233
+"924","Scone, Coffee, Coffee, Spanish Brunch",1,0.000107515320933233
+"925","Scone, Coffee, Tea",1,0.000107515320933233
+"926","Scone, Cookies, Hot chocolate, Coffee",1,0.000107515320933233
+"927","Scone, Crepes, Alfajores, Alfajores",1,0.000107515320933233
+"928","Scone, Hot chocolate, Coffee, Coffee",1,0.000107515320933233
+"929","Scone, Muffin, Cake, Tea, Bread",1,0.000107515320933233
+"930","Scone, Pastry, Coffee",1,0.000107515320933233
+"931","Scone, Tea, Sandwich",1,0.000107515320933233
+"932","Smoothies, Cake, Coffee, Bread",1,0.000107515320933233
+"933","Smoothies, Coffee, Bread, Spanish Brunch, Bread",1,0.000107515320933233
+"934","Smoothies, Coffee, Cake, Bread",1,0.000107515320933233
+"935","Smoothies, Keeping It Local, Coffee",1,0.000107515320933233
+"936","Smoothies, Sandwich, Soup",1,0.000107515320933233
+"937","Soup, Bread, Coffee",1,0.000107515320933233
+"938","Soup, Coffee, Coffee, Coffee, Cake",1,0.000107515320933233
+"939","Soup, Coffee, Pastry",1,0.000107515320933233
+"940","Soup, Coke, Hot chocolate, Fudge",1,0.000107515320933233
+"941","Soup, Salad, Extra Salami or Feta, Sandwich, Coffee, Coffee, Coffee",1,0.000107515320933233
+"942","Soup, Sandwich, Bread",1,0.000107515320933233
+"943","Soup, Sandwich, Coffee, Tea, Cake",1,0.000107515320933233
+"944","Soup, Sandwich, Frittata",1,0.000107515320933233
+"945","Soup, Sandwich, Mineral water, Juice, Coffee",1,0.000107515320933233
+"946","Soup, Sandwich, Tea, Alfajores, Alfajores",1,0.000107515320933233
+"947","Soup, Scandinavian, Coffee, Mineral water",1,0.000107515320933233
+"948","Soup, Soup, Soup, Bread, Cake, Cake, Tea, Bread, Tea",1,0.000107515320933233
+"949","Soup, Spanish Brunch, Sandwich, Coffee, Tea",1,0.000107515320933233
+"950","Soup, Tea, Coffee, Coffee",1,0.000107515320933233
+"951","Soup, Tea, Juice",1,0.000107515320933233
+"952","Spanish Brunch, Cake",1,0.000107515320933233
+"953","Spanish Brunch, Coffee, Bread",1,0.000107515320933233
+"954","Spanish Brunch, Coffee, Coke, Bread, Mineral water, Soup",1,0.000107515320933233
+"955","Spanish Brunch, Coffee, Hot chocolate, Bakewell, Bread",1,0.000107515320933233
+"956","Spanish Brunch, Extra Salami or Feta, Coffee",1,0.000107515320933233
+"957","Spanish Brunch, Salad, Tea, Coffee, Pastry, Cake",1,0.000107515320933233
+"958","Spanish Brunch, Sandwich, Coffee, Truffles",1,0.000107515320933233
+"959","Spanish Brunch, Sandwich, Toast, Cake, Medialuna, Chicken Stew",1,0.000107515320933233
+"960","Tartine, Bread, Coffee",1,0.000107515320933233
+"961","Tartine, Coffee",1,0.000107515320933233
+"962","Tartine, Coffee, Hot chocolate, Brownie",1,0.000107515320933233
+"963","Tartine, Juice, Bread, Coffee",1,0.000107515320933233
+"964","Tartine, Pastry, Bread, My-5 Fruit Shoot",1,0.000107515320933233
+"965","Tartine, Pick and Mix Bowls, Coffee, Coke",1,0.000107515320933233
+"966","Tea, Alfajores, Cake",1,0.000107515320933233
+"967","Tea, Alfajores, Pastry",1,0.000107515320933233
+"968","Tea, Bread, Brownie",1,0.000107515320933233
+"969","Tea, Bread, Salad, Sandwich",1,0.000107515320933233
+"970","Tea, Bread, Scone, Cake",1,0.000107515320933233
+"971","Tea, Bread, Truffles, Pastry",1,0.000107515320933233
+"972","Tea, Brownie",1,0.000107515320933233
+"973","Tea, Brownie, Cake",1,0.000107515320933233
+"974","Tea, Coffee, Bread, Pastry",1,0.000107515320933233
+"975","Tea, Coffee, Cake, Jammie Dodgers",1,0.000107515320933233
+"976","Tea, Coffee, Coffee, Muffin, Cake",1,0.000107515320933233
+"977","Tea, Coffee, Coffee, Toast",1,0.000107515320933233
+"978","Tea, Coffee, Cookies",1,0.000107515320933233
+"979","Tea, Coffee, Cookies, Muffin",1,0.000107515320933233
+"980","Tea, Coffee, Cookies, Sandwich",1,0.000107515320933233
+"981","Tea, Coffee, Hot chocolate",1,0.000107515320933233
+"982","Tea, Coffee, Jammie Dodgers, Cake, Bread",1,0.000107515320933233
+"983","Tea, Coffee, Medialuna",1,0.000107515320933233
+"984","Tea, Coffee, Medialuna, Art Tray",1,0.000107515320933233
+"985","Tea, Coffee, Medialuna, Cookies, Farm House",1,0.000107515320933233
+"986","Tea, Coffee, Sandwich, Sandwich, Bread",1,0.000107515320933233
+"987","Tea, Coffee, Scone",1,0.000107515320933233
+"988","Tea, Coffee, Soup, Art Tray",1,0.000107515320933233
+"989","Tea, Coffee, Soup, Cake",1,0.000107515320933233
+"990","Tea, Coffee, Soup, Salad",1,0.000107515320933233
+"991","Tea, Coffee, Toast",1,0.000107515320933233
+"992","Tea, Coffee, Truffles",1,0.000107515320933233
+"993","Tea, Coke",1,0.000107515320933233
+"994","Tea, Coke, Cake",1,0.000107515320933233
+"995","Tea, Coke, Frittata, Sandwich",1,0.000107515320933233
+"996","Tea, Cookies",1,0.000107515320933233
+"997","Tea, Granola",1,0.000107515320933233
+"998","Tea, Hearty & Seasonal, Farm House",1,0.000107515320933233
+"999","Tea, Hot chocolate, Cake, Eggs, Fudge, Bread",1,0.000107515320933233
+"1000","Tea, Hot chocolate, Cake, Salad, Coffee",1,0.000107515320933233
+"1001","Tea, Hot chocolate, Cookies, Jammie Dodgers, Bread",1,0.000107515320933233
+"1002","Tea, Juice",1,0.000107515320933233
+"1003","Tea, Juice, Coffee",1,0.000107515320933233
+"1004","Tea, Juice, Cookies",1,0.000107515320933233
+"1005","Tea, Juice, Muffin, Gingerbread syrup",1,0.000107515320933233
+"1006","Tea, Juice, Sandwich, Chicken Stew",1,0.000107515320933233
+"1007","Tea, Medialuna",1,0.000107515320933233
+"1008","Tea, Mineral water, Soup, Cake",1,0.000107515320933233
+"1009","Tea, Pastry",1,0.000107515320933233
+"1010","Tea, Sandwich",1,0.000107515320933233
+"1011","Tea, Sandwich, Bread, Cake",1,0.000107515320933233
+"1012","Tea, Sandwich, Medialuna",1,0.000107515320933233
+"1013","Tea, Scone, Bread",1,0.000107515320933233
+"1014","Tea, Soup",1,0.000107515320933233
+"1015","Tea, Tea, Bread, Alfajores, Bread, Spanish Brunch",1,0.000107515320933233
+"1016","Tea, Tea, Cake, Medialuna, Medialuna, Coffee, Scandinavian",1,0.000107515320933233
+"1017","Tea, Tea, Coffee",1,0.000107515320933233
+"1018","Tea, Tea, Cookies, Pastry",1,0.000107515320933233
+"1019","Tea, Tea, Scone",1,0.000107515320933233
+"1020","Tea, Tea, Tea, Brownie, Bread",1,0.000107515320933233
+"1021","Tea, Tea, The Nomad",1,0.000107515320933233
+"1022","Tea, Tea, Toast",1,0.000107515320933233
+"1023","Tea, Tiffin, Bread",1,0.000107515320933233
+"1024","Tea, Toast, Coffee",1,0.000107515320933233
+"1025","Tea, Truffles, Medialuna",1,0.000107515320933233
+"1026","The Nomad, Chicken Stew, Cake, Coffee, Coffee",1,0.000107515320933233
+"1027","The Nomad, Duck egg, Coffee, Coffee, Tea",1,0.000107515320933233
+"1028","The Nomad, Tea, Coffee",1,0.000107515320933233
+"1029","Tiffin, Bread",1,0.000107515320933233
+"1030","Tiffin, Bread, Smoothies, Coffee, Jammie Dodgers, Sandwich",1,0.000107515320933233
+"1031","Tiffin, Chicken Stew, Bread",1,0.000107515320933233
+"1032","Tiffin, Coffee, Bread",1,0.000107515320933233
+"1033","Tiffin, Coffee, Tea",1,0.000107515320933233
+"1034","Tiffin, Cookies, Coffee",1,0.000107515320933233
+"1035","Toast, Granola, Pastry, Coffee, Bread",1,0.000107515320933233
+"1036","Toast, Soup, Coffee, Juice",1,0.000107515320933233
+"1037","Toast, Tea, Coffee",1,0.000107515320933233
+"1038","Truffles, Bread",1,0.000107515320933233
+"1039","Truffles, Cake, Scandinavian, Coffee",1,0.000107515320933233
+"1040","Truffles, Coffee, Cake, Pastry, Sandwich",1,0.000107515320933233
+"1041","Truffles, Coffee, Sandwich, Sandwich, Bread",1,0.000107515320933233
+"1042","Truffles, Coffee, Tshirt",1,0.000107515320933233
+"1043","Truffles, Farm House, Bread",1,0.000107515320933233
+"1044","Truffles, Mineral water, Bread, Scone, Spanish Brunch",1,0.000107515320933233
+"1045","Truffles, Sandwich",1,0.000107515320933233
+"1046","Truffles, Tea, Soup, Salad, Cookies, Bread",1,0.000107515320933233
+"1047","Vegan Feast, Hot chocolate, Coffee, Brownie, Bread, Cookies",1,0.000107515320933233
+"1048","Vegan mincepie, Bread, Coffee",1,0.000107515320933233
+"1049","Vegan mincepie, Coffee, Baguette",1,0.000107515320933233
+"1050","Vegan mincepie, Coffee, Hot chocolate",1,0.000107515320933233
+"1051","Vegan mincepie, Cookies, Tiffin, Bread",1,0.000107515320933233
