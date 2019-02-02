@@ -1,8 +1,15 @@
 ---
 title: "ZOZOテクノロジーズ新卒採用 1次課題"
-author: "Koki Ando"
+author: "安藤光希 (Koki Ando)"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  html_document:
+    code_folding: hide
+    highlight: tango
+    number_section: yes
+    theme: cosmo
+    toc: yes
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}
@@ -15,17 +22,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 > ファッションECの特徴をうまく利用したエンジンを作る想定で以下の問いに答えてください。
 
-+ ファッションアイテムを扱うECで観測される「購買ログ」にはどんな特性が存在すると思いますか？
+1. ファッションアイテムを扱うECで観測される「購買ログ」にはどんな特性が存在すると思いますか？
 商材ごとにEC上におけるユーザーの購買行動は変化すると考えることは自然な発想です。観測されるデータの背後で起こっていると思われる現象と絡めて説明してください。
 本問はレコメンドの経験を問うものではありません。自由に想像して回答してください。
 (参考までに、一般的なECで得られるデータのサンプルを提示します。これのほか、実際のECで扱っていると思われるデータやSNSなど外部のデータソースと組み合わせて回答しても構いません。)
 
-+ どんなアルゴリズムが有効だと思いますか？
+2. どんなアルゴリズムが有効だと思いますか？
 1.で説明した特性を利用したレコメンドアルゴリズムを開発し、ECの売上向上を目指します。
 どんなアルゴリズムが有効だと思いますか？アルゴリズムの概要および効果的だと考える理由を説明して下さい。
 
-
-+ 2.で説明したレコメンドアルゴリズムを実装してください。
+3. 2で説明したレコメンドアルゴリズムを実装してください。
 一般に公開されているベンチマーク、もしくは自作したダミーデータを用いてアルゴリズムの稼働確認をして下さい。ただし、稼働確認に用いるデータはファッションに関係していなくても構いませんし、1.で説明した特性を満たしている必要もありません。
 (本問は目的に対して手段を正しく選択できていることを重視するため、高度なアルゴリズムである必要はありません。目的に対して手段を正しく選択できるかを重視するため高度なアルゴリズムである必要はない。)
 
@@ -33,8 +39,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## ファッションアイテムを扱うEC上での購買ログにはどのような特徴が存在するのか？
 
-1. **ユーザーは当初の目的であった優先順位の高い商品を買ってから、その後に付随して違うアイテムを探す。**
-2. **性別、年代、地域によってユーザーの購買アイテムが大きく異なっていく。**
+1. **年齢や性別と行った個の属性や、ブランドや好みのファッションアイテムのカテゴリなどの履歴によってほぼ全てのユーザーは一定のユーザー群に分類されることができる。**
+
+2. **ユーザーは当初の目的であった優先順位の高い商品を買ってから、その後に付随して違うアイテムを探す。**
 
 自分はこの問いに対して、普段自分がどのような行動をEC上で行なっているか、ということを想起するところから始めた。自分は通常**一つ以上の目的の商品を思い浮かべてからECを訪れている**。ユーザーの中には、ウィンドーショッピング目的で訪れ、そこで気になった商品があるとクリックして購買するというユーザーも多いであろうが、自分にはそのケースは当てはまらない。そのため、今回の分析レポートの分析対象からはそのようなユーザーを外すことにした。
 
@@ -62,13 +69,13 @@ knitr::opts_chunk$set(echo = TRUE)
 この分析を行う上で効果的だと思われた手法はMarket Basket Analysisという手法である。
 この手法をメリットとデメリットを明記し、他に選べたであろう分析手法となぜそれら選ばなかったのかについての理由を提示する。
 そもそもMarket Basket Analysisとは何か？
-Market Basket Analysisは商品同士の関連性を明らかにする為に小売大手によって用いられている重要な技術の一つである。主に、商品決済において頻繁に同時に取引される商品の組み合わせを明らかにすることによって当分析手法は効果を発揮する。言うなれば、当手法は顧客が買う商品の関連性を売り手側に
+> Market Basket Analysisは商品同士の関連性を明らかにする為に小売大手によって用いられている重要な技術の一つである。主に、商品決済において頻繁に同時に取引される商品の組み合わせを明らかにすることによって当分析手法は効果を発揮する。言うなれば、当手法は顧客が買う商品の関連性を売り手側に
 (筆者日本語訳)
 To put it another way, it allows retailers to identify relationships between the items that people buy.
 Association Rules are widely used to analyze retail basket or transaction data, and are intended to identify strong rules discovered in transaction data using measures of interestingness, based on the concept of strong rules.
 [R-bloggers](https://www.r-bloggers.com/a-gentle-introduction-on-market-basket-analysis%E2%80%8A-%E2%80%8Aassociation-rules/)より引用
 
-以上が、オンライン文献より引用した説明であるが、このレポートではこの分析手法を用いて、どの商品が同時に購入されることが多いか、を発見する。その後に、自分のように最も優先順位の高い商品を買ったユーザーに対して頻繁に同時に購入されている商品を提示しやすくし、さらなる購買を促すというレコメンドエンジンを作成する。
+以上が、オンライン文献より引用した説明であるが、このレポートではこのマーケットバスケット分析(以降MBAと記述する)手法を用いて、主にどの商品が同時に購入されることが多いか、を発見する。その後に、自分のように最も優先順位の高い商品を買ったユーザーに対して頻繁に同時に購入されている商品を提示しやすくし、さらなる購買を促すというレコメンドエンジンを作成する。
 
 
 ## レコメンドアルゴリズムの実装
@@ -76,100 +83,200 @@ Association Rules are widely used to analyze retail basket or transaction data, 
 一般に公開されているベンチマーク、もしくは自作したダミーデータを用いてアルゴリズムの稼働確認をして下さい。ただし、稼働確認に用いるデータはファッションに関係していなくても構いませんし、1.で説明した特性を満たしている必要もありません。
 (本問は目的に対して手段を正しく選択できていることを重視するため、高度なアルゴリズムである必要はありません。目的に対して手段を正しく選択できるかを重視するため高度なアルゴリズムである必要はない。)
 
-### K平均法を用いたユーザーの振り分け
+必要なパッケージの読込
 
-#### ダミーデータ
-
-
-
-
-### キーとなる分析指標
-
-このレポートでは、売上のパターンを発掘するためにこの統計手法を用いる。"cross-selling opportunities"を見つける。例)商品Aを購入した顧客は商品Bも共に購入する傾向がある。
-
-+ Probabilities
-+ Support
-+ Confidence
-+ Lift
-+ Conviction
-
-
-## 使用するライブラリー
-
-```{r}
-library(DT)
-library(tidyverse)
-library(data.table)
+```{r warning=FALSE, message=FALSE}
+library(tidyverse) #データ整形や分析フローの効率化のため
+library(data.table) #データの表示やいくつかの関数を使用するため
+library(cluster) #クラスター分析全般で用いるため
 ```
 
-## 使用するデータ
+### K平均法を用いたユーザーの振り分け
 
-[Bread Basket data](https://github.com/viktree/curly-octo-chainsaw/blob/master/requirements.txt)
-スコットランドのBread Basket社が以前提供していた匿名顧客の2016年10月30日から2017年4月9日までの購買データをもとに分析を行う。
+#### ダミーデータ  
+
+ユーザーデータのダミーを作る際には[擬似個人情報データ生成サービス](https://hogehoge.tk/personal/)と[都道府県別年平均気温ランキング](http://grading.jpn.org/SRB02101.html)を利用した。
+(データの作成と整形は下記スクリプトを参照。)
+
++ 外部リンク: [ダミーデータの作成スクリプト](https://github.com/koki25ando/insurance/blob/master/user_dummy.R)
+
+```{r}
+dummy_df <- read.csv("dummy_df.csv")
+str(dummy_df)
+```
+
+データの中身は
++ 現住所
++ 氏名
++ 年齢
++ 居住地の年間平均気温が
+以上の四つが主に含まれている。
+
+#### クラスター分析
+
+```{r}
+model <- kmeans(dummy_df %>%
+                  select(年平均気温, 年齢), #居住地の気候とユーザーの年齢を抽出
+                  center = 10) #クラスター数は10に設定
+dummy_km10 <- mutate(dummy_df %>%
+                      select(年平均気温, 年齢),
+                      cluster = model$cluster) #上で作成したモデル内のクラスターIDを貼り付ける
+dummy_km10 %>%
+  ggplot(aes(x = 年齢, y = 年平均気温, colour = as.factor(cluster))) +
+  geom_point() +
+  stat_ellipse(show.legend = F) +
+  theme_grey(base_family = "HiraKakuProN-W3")
+```
+
+クラスター数は便宜上10個とした。理由としては、そもそもデータが実データではなく恣意的に整形されたものでありなおかつ、ファッションECにおいては年齢や居住地域以外の要素が大きく影響されると考えたため、アルゴリズムをシンプル化するために今回は10クラスターで行なった。
+
+
+```{r warning=FALSE, message=FALSE}
+dummy_km10 %>%
+  ggplot(aes(as.factor(cluster))) +
+  geom_histogram(stat="count")  +
+  geom_text(stat='count', aes(label=..count..), position = position_stack(vjust = 0.5), size=4)
+```
+
+上記で作ったデータのクラスター内のダミーユーザー数には偏りがあるため、その配分に応じてのちに購買データのトランザクションもランダムに配分する。
+
+### マーケットバスケット分析
+
+[Bread Basket data](https://github.com/viktree/curly-octo-chainsaw/blob/master/BreadBasket_DMS.csv)
+スコットランドのBread Basket社が以前提供していたデータをもとに分析を行う。
+
+実際のECの購買ログデータを使用するのが、望ましかったが残念ながら公開されているものは見つけられなかった。そのため、一取引ごとにユーザーとユーザーの購買商品が記録されている[Bread Basket data](https://github.com/viktree/curly-octo-chainsaw/blob/master/BreadBasket_DMS.csv)を用いる。
 
 ```{r}
 transactions_df <- read.csv("BreadBasket_DMS.csv")
+str(transactions_df)
 ```
 
-#### Probabilities
+匿名顧客の2016年10月30日から2017年4月9日までの購買データ。データには9684回分の取引データがあり、
 
-```{r}
++ 購買日時
++ 取引ID
++ 購入商品
+
+主に以上の三つが含まれている。
+
+#### キーとなる分析指標を求める
+
+このレポートでは、売上のパターンを発掘するためにこの統計手法を用いる。"cross-selling opportunities"を見つける。例)商品Aを購入した顧客は商品Bも共に購入する傾向がある。
+
++ Probability(A): 任意の商品Aが購入される確率 = 商品Aが買われた数/全取引数
+
++ Support(A,B): 任意の商品Aと商品Bが同時に購入される確率 = 商品AとBが両方含まれた取引数/全取引数
+
+
+
+以上五つの指標を順序立てて分析して行く。
+
+##### Probability
+
+```{r fig.height=8}
 Probability_df <- data.frame(table(transactions_df$Item)) %>%
   mutate(Pro = round(Freq/sum(Freq), digits = 5))
 
 Probability_df %>%
-  # head(20) %>%
   ggplot(aes(x = Var1, y = (Freq/nrow(transactions_df)), fill = Var1)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   coord_flip() +
   labs(x = "Item Name", y = "Frequency")
 ```
 
-#### Support & Confidence
+商品の購買頻度に大きな散らばりが見受けられる。そのため、今回の分析においては購買頻度が極端に少ない商品は排除する。具体的には、購買回数が5回以下のものは全て除外することにした。
 
-probability that a customer will buy two items (A & B) together
-
-```{r}
-support_df <- read.csv("support_df.csv")
-#上記に使っているデータを整形して、購買商品の組み合わせを作ったデータフレームをインポート
-# データ整形の過程は外部リンク参照(https://github.com/koki25ando/insurance/blob/master/cleasingofbread.R)
+```{r fig.height=8}
+Probability <- Probability_df %>% 
+  filter(Freq > 5) #購入回数が5回以上のみの商品のみを選択する
+Probability %>% 
+  ggplot(aes(x = Var1, y = (Freq/nrow(transactions_df)), fill = Var1)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  coord_flip() + 
+  labs(x = "Item Name", y = "Frequency")
 ```
 
+##### Support
 
 ```{r}
-confidence <- function(first_item){
-   pro_of_first_item <- Probability_df %>%
+Support <- read.csv("Support.csv")
+```
+
+主な指標の一つであるSupportを求めるために上で使っていた、transactions_dfを整形して、[Support.csv](https://github.com/koki25ando/insurance/blob/master/Support.csv)を作成した。
+整形スクリプトは[こちら](https://github.com/koki25ando/insurance/blob/master/support.R)を参照。
+
+```{r}
+head(Support)
+```
+
+このデータには主に
+
++ 購買商品のセット組み合わせ
++ 組み合わせの頻度
++ 全取引に対しての任意の組合せの割合
+
+```{r}
+Result_pro_sup <- function(first_item){
+  model = list()
+  #第一指標Probabilityを抽出
+   pro_of_first_item <- Probability %>%
     filter(Var1 == first_item)
-   Pobability_of_item  <- pro_of_first_item$Pro
-   print(paste0("Probability of the item: ", Pobability_of_item))
-
-   sup_con_dat  <- support_df[support_df$Var1 %like% first_item, ] %>%
-     mutate(Confidence = Support/Pobability_of_item) %>%
-     head(10)
-   print(sup_con_dat)
-
-   sup_con_dat$Var1 <- sup_con_dat$Var1 %>%
-     str_remove(first_item) %>%
-     str_remove(", ")
-   print(sup_con_dat)
-   pro_of_recommend_item  <- Probability_df %>%
-     filter(Var1 %in% sup_con_dat$Var1)
-   merge(sup_con_dat, pro_of_recommend_item, by = "Var1") %>%
-     mutate(Lift = Confidence/Pro)
+   model$Probability_of_First_Item <- pro_of_first_item$Pro
+   
+   #第二指標Supportを算出する
+   support_result <- Support[Support$Var1 %like% first_item, ] %>%
+     # mutate(Confidence = Support/Pobability_of_item) %>%
+     head(30)
+   model$Support <- support_result
+   
+   Potential_items <- support_result$Var1 %>%
+     str_remove_all(paste0(first_item, ", ")) %>% 
+     str_remove_all(paste0(", ", first_item)) %>% 
+     str_remove_all(first_item)
+   model$Potentials <- Potential_items
+   model
 }
-confidence(first_item="Bread")
+model <- Result_pro_sup(first_item="Sandwich")
 ```
 
-## Confidence
+##### レコメンド関数
 
-probability that customer buys B, given that they already bought A
+```{r}
+recommend_me <- function(first_item){
+  model <- Result_pro_sup(first_item)
+  
+   model$Support$Var1 <- model$Support$Var1 %>% 
+    str_remove_all(paste0(first_item, ", ")) %>% 
+    str_remove_all(paste0(", ", first_item)) %>% 
+    str_remove(first_item)
+    Confidence <- model$Support %>% 
+      filter(Var1 != "") %>% 
+      select(Var1, Freq) %>% 
+      mutate(Total = sum(Freq)) %>% 
+      group_by(Var1) %>%
+      mutate(Sub_Total = sum(Freq),
+             Ratio = Sub_Total/Total) %>% 
+      select(Var1, Ratio) %>% 
+      ungroup()
+  recommend_df <- Confidence[!duplicated(Confidence$Var1), ] %>% 
+    arrange(desc(Ratio))
+  
+  for (i in 1:5){
+    print(paste0(first_item, "を購入した人は", recommend_df[i,]$Var1, "を", 
+                 round(recommend_df[i,]$Ratio*100, digits = 2), "%の確率で買ってます。"))
+  } 
+}
+```
 
-## Lift
 
-ratio of confidence to the base probability of just buying items
+## レコメンドエンジンの動作確認
 
+仮想ユーザー・購買商品を用いた動作確認
 
-### ダミーデータを利用した動作確認
+```{r}
+recommend_me(first_item = "Muffin")
+```
 
 
 
@@ -178,25 +285,29 @@ ratio of confidence to the base probability of just buying items
 + 使用したデータは食品でありさらには、保存が効かない商品についてだった。その為季節性の激しいさらには長持ちする衣類を対象にすると思うような効果を出せない可能性もある。
 + さらには一般的に衣類はブランド品から日用品といったものまで幅広い価格帯の商品が多く、さらには季節性も激しいと思われる。
 
-# Challenges to overcome
+# 改善点
+
+レポートのまとめとして、ダミーデータではなく実際のデータを用いる際のレコメンドエンジン構築について二つの主な昨日に分けて改善できる箇所を挙げる。
+
+## ユーザークラスタリング
+
+**ゾーニングする際のユーザー属性**
+
+今回はダミーデータを用いたため、居住地の気候と年齢のみを指標に二次元データをクラスタリングした。しかし、最初の自分の解答でも述べたように重要な要素は多数あり、実際にはこのようなシンプルな属性のみでユーザーを区分けし、最適な商品をおすすめすることなどできないであろう。
+そのため、実際のデータはより多くの因子をもとにレコメンド対象者を選別することができ、MBAもより効果的に機能することができるであろう。
+
+## MBA分析
+
+今回はダミーデータとして、入手が容易であった食品の購買データを利用した。しかし、根本的に食品とファッションアイテムには違いがある。
+スーパーなどで、食品を一つだけ買って帰ってしまう顧客はそれほど多く無いと推測できるし、逆に、衣類は単品買いということが頻繁に起こっていてもなんら、不思議な点は無いであろう。そのため、
+
 
 + 商品の価格帯が大きく変動するので、ユーザーごとにクラスタリングしたのちに、クラスターごとの購買ログから上述したパターン認識を行い商品をレコメンドするといった手法も実行可能ではありそう。実際のデータがあれば是非とも挑戦したいと思った。
 + このレポートで用いたように扱う商品が多くなればなるほどなかなか組み合わせというものは見つけづらいかも知れない。その為、サンプルデータで提供されていたような小カテゴリやブランドといった要因で同時に購入される商品の組み合わせを発掘して、レコメンドするという方法も可能であると思われる。
 
+以上
 
-以上。安藤光希
-
-
-
-
-
-
-
-
-
-
-
-
+安藤光希
 
 
 # 参考文献リスト
@@ -210,3 +321,7 @@ ratio of confidence to the base probability of just buying items
 + [intro](http://r-statistics.co/Association-Mining-With-R.html)
 + [intro pdf](https://cran.r-project.org/web/packages/arules/vignettes/arules.pdf)
 + [R-Bloggers](https://www.r-bloggers.com/association-rules-and-market-basket-analysis-with-r/)
++ [Cluster Analysis of Whisky Review Dataset](https://www.kaggle.com/koki25ando/cluster-analysis-of-whisky-reviews-using-k-means)
++ [BARNEY TAN](https://business.sydney.edu.au/staff/barney.tan)
++ [PDF](http://www.jmlr.org/papers/volume12/hahsler11a/hahsler11a.pdf)
+
