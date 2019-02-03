@@ -1,7 +1,7 @@
 ---
 title: "ZOZOテクノロジーズ新卒採用 1次課題"
 author: "安藤光希 (Koki Ando)"
-date: "`r Sys.Date()`"
+date: '`r Sys.Date()`'
 output:
   html_document:
     code_folding: hide
@@ -10,6 +10,9 @@ output:
     theme: cosmo
     toc: yes
     toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
 ---
 
 ```{r setup, include=FALSE}
@@ -68,23 +71,22 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### K平均法クラスター分析
 
+主に、ユーザーを特徴的なデータで分類するために、クラスタリングを用いる。
+集団の中から、類似点の多いものを集めてクラスターを作成しユーザを分類することができる最も基本的で且つ、汎用的な分析手法のため今回利用する。
+さらに、次ステップの実装においては、居住地域の気候と年齢といういたってシンプルな二次元データを利用するため、今回はクラスタリングが最も効果的であると考えた。
 
 
-### MBA
+### マーケットバスケット分析(MBA)
 
-> Market Basket Analysisは商品同士の関連性を明らかにする為に小売大手によって用いられている重要な技術の一つである。主に、商品決済において頻繁に同時に取引される商品の組み合わせを明らかにすることによって当分析手法は効果を発揮する。言うなれば、当手法は顧客が買う商品の関連性を売り手側に
-(筆者日本語訳)
-> To put it another way, it allows retailers to identify relationships between the items that people buy.
-Association Rules are widely used to analyze retail basket or transaction data, and are intended to identify strong rules discovered in transaction data using measures of interestingness, based on the concept of strong rules.
+> Market Basket Analysisは商品同士の関連性を明らかにする為に小売大手によって用いられている重要な技術の一つである。主に、商品決済において頻繁に同時に取引される商品の組み合わせを明らかにすることによって当分析手法は効果を発揮する。言うなれば、当手法は売り手側が商品売り上げの関連性を明確に理解させることを可能にする手法なのである。(筆者日本語訳)
+> Market Basket Analysis is one of the key techniques used by large retailers to uncover associations between items. It works by looking for combinations of items that occur together frequently in transactions. To put it another way, it allows retailers to identify relationships between the items that people buy.
 [R-bloggers](https://www.r-bloggers.com/a-gentle-introduction-on-market-basket-analysis%E2%80%8A-%E2%80%8Aassociation-rules/)より引用
 
-以上が、オンライン文献より引用した説明であるが、このレポートではこのマーケットバスケット分析(以降MBAと記述する)手法を用いて、主にどの商品が同時に購入されることが多いか、を発見する。その後に、自分のように最も優先順位の高い商品を買ったユーザーに対して頻繁に同時に購入されている商品を提示しやすくし、さらなる購買を促すというレコメンドエンジンを作成する。
-
+以上が、オンライン文献より引用した説明であるが、このレポートではこのマーケットバスケット分析(以降MBAと記述する)手法を用いて、主にどの商品が同時に購入されることが多いか、を発見する。自分が想定したユーザーの購買ログには、一定のパターンがあり、過去の購入商品の組み合わせを分析すれば、一つの商品から同時に購入される確率の高い商品を導くことができ、購入を促せば売り上げ向上に繋げることが可能と考えたため、今回のレコメンドエンジンにはこのアルゴリズムを用いる。
 
 ## レコメンドアルゴリズムの実装
 
-一般に公開されているベンチマーク、もしくは自作したダミーデータを用いてアルゴリズムの稼働確認をして下さい。ただし、稼働確認に用いるデータはファッションに関係していなくても構いませんし、1.で説明した特性を満たしている必要もありません。
-(本問は目的に対して手段を正しく選択できていることを重視するため、高度なアルゴリズムである必要はありません。目的に対して手段を正しく選択できるかを重視するため高度なアルゴリズムである必要はない。)
+一般に公開されているベンチマーク、もしくは自作したダミーデータを用いてアルゴリズムの稼働確認をして下さい。ただし、稼働確認に用いるデータはファッションに関係していなくても構いませんし、1.で説明した特性を満たしている必要もありません。(本問は目的に対して手段を正しく選択できていることを重視するため、高度なアルゴリズムである必要はありません。目的に対して手段を正しく選択できるかを重視するため高度なアルゴリズムである必要はない。)
 
 必要なパッケージの読込
 
@@ -109,10 +111,12 @@ str(dummy_df)
 ```
 
 データの中身は
+
 + 現住所
 + 氏名
 + 年齢
-+ 居住地の年間平均気温が
++ 居住地の年間平均気温
+
 以上の四つが主に含まれている。
 
 #### クラスター分析
@@ -122,8 +126,11 @@ model <- kmeans(dummy_df %>%
                   select(年平均気温, 年齢), #居住地の気候とユーザーの年齢を抽出
                   center = 10) #クラスター数は10に設定
 dummy_km10 <- mutate(dummy_df %>%
-                      select(年平均気温, 年齢),
+                      select(年平均気温, 年齢, 都道府県),
                       cluster = model$cluster) #上で作成したモデル内のクラスターIDを貼り付ける
+```
+
+```{r eval = FALSE}
 dummy_km10 %>%
   ggplot(aes(x = 年齢, y = 年平均気温, colour = as.factor(cluster))) +
   geom_point() +
@@ -131,15 +138,9 @@ dummy_km10 %>%
   theme_grey(base_family = "HiraKakuProN-W3")
 ```
 
+![](/Users/KokiAndo/Desktop/R/R report/Insurance/cluster_plot.jpeg)
+
 クラスター数は便宜上10個とした。理由としては、そもそもデータが実データではなく恣意的に整形されたものでありなおかつ、ファッションECにおいては年齢や居住地域以外の要素が大きく影響されると考えたため、アルゴリズムをシンプル化するために今回は10クラスターで行なった。
-
-
-```{r warning=FALSE, message=FALSE}
-dummy_km10 %>%
-  ggplot(aes(as.factor(cluster))) +
-  geom_histogram(stat="count")  +
-  geom_text(stat='count', aes(label=..count..), position = position_stack(vjust = 0.5), size=4)
-```
 
 上記で作ったデータのクラスター内のダミーユーザー数には偏りがあるため、その配分に応じてのちに購買データのトランザクションもランダムに配分する。
 
@@ -168,24 +169,18 @@ str(transactions_df)
 このレポートでは、売上のパターンを発掘するためにこの統計手法を用いる。"cross-selling opportunities"を見つける。例)商品Aを購入した顧客は商品Bも共に購入する傾向がある。
 
 + Probability(A): 任意の商品Aが購入される確率 = 商品Aが買われた数/全取引数
-
-+ Support(A,B): 任意の商品Aと商品Bが同時に購入される確率 = 商品AとBが両方含まれた取引数/全取引数
-
-
-
-以上五つの指標を順序立てて分析して行く。
++ Support(A,B): 任意の商品Aと商品Bのが同時に購入される確率 = 商品AとBが両方含まれた取引数/全取引数
 
 ##### Probability
 
 ```{r fig.height=8}
 Probability_df <- data.frame(table(transactions_df$Item)) %>%
   mutate(Pro = round(Freq/sum(Freq), digits = 5))
-
-Probability_df %>%
-  ggplot(aes(x = Var1, y = (Freq/nrow(transactions_df)), fill = Var1)) +
-  geom_bar(stat = "identity", show.legend = FALSE) +
-  coord_flip() +
-  labs(x = "Item Name", y = "Frequency")
+# Probability_df %>%
+#   ggplot(aes(x = Var1, y = (Freq/nrow(transactions_df)), fill = Var1)) +
+#   geom_bar(stat = "identity", show.legend = FALSE) +
+#   coord_flip() +
+#   labs(x = "Item Name", y = "Frequency")
 ```
 
 商品の購買頻度に大きな散らばりが見受けられる。そのため、今回の分析においては購買頻度が極端に少ない商品は排除する。具体的には、購買回数が5回以下のものは全て除外することにした。
@@ -210,7 +205,7 @@ Support <- read.csv("Support.csv")
 整形スクリプトは[こちら](https://github.com/koki25ando/insurance/blob/master/support.R)を参照。
 
 ```{r}
-head(Support)
+head(Support, 30)
 ```
 
 このデータには主に
@@ -246,7 +241,31 @@ model <- Result_pro_sup(first_item="Sandwich")
 ##### レコメンド関数
 
 ```{r}
-recommend_me <- function(first_item){
+### クラスターを判別する関数
+detect_cluster <- function(Address, Age){
+  temperature <- dummy_km10 %>% 
+    filter(都道府県 == Address) %>% #インプットされた都道府県を使って、年間平均気温を導く
+    select(年平均気温)
+  avr_temp <- temperature[1,] #ユーザーの居住地の年間平均気温の変数を作成
+  
+  similar_points <- dummy_km10 %>% 
+    filter(年平均気温 > avr_temp-1, 年平均気温 < avr_temp+1, 年齢 > Age-3, 年齢 < Age+3) %>% #年間平均気温+-1,年齢の+-3の幅で抽出
+    select(cluster) 
+  cluster_num = names(which.max(table(similar_points))) #クラスターナンバーの最頻値を取得
+  
+  paste0("あなたが属するクラスターは第", cluster_num, "クラスターです。") %>% 
+    print()
+  dummy_km10 %>%
+  ggplot() +
+  geom_point(aes(x = 年齢, y = 年平均気温, colour = as.factor(cluster))) +
+  # stat_ellipse(show.legend = F) +
+  theme_grey(base_family = "HiraKakuProN-W3") + 
+  geom_point(aes(x=Age, y = avr_temp), colour = "red", size = 3) +
+  labs(title = "赤い点があなたです。")
+}
+
+### 過去の購買ログを分析して、おすすめアイテムを見つける関数
+recommend_item <- function(first_item){
   model <- Result_pro_sup(first_item)
 
    model$Support$Var1 <- model$Support$Var1 %>%
@@ -270,15 +289,27 @@ recommend_me <- function(first_item){
                  round(recommend_df[i,]$Ratio*100, digits = 2), "%の確率で買ってます。"))
   }
 }
+
+
+# 上記二つの関数をまとめる最終的な関数
+recomment_me <- function(Address, Age, first_item){
+  detect_cluster(Address, Age)
+  recommend_item(first_item)
+}
 ```
 
 
 ## レコメンドエンジンの動作確認
 
+概要
+![](/Users/KokiAndo/Desktop/R/R report/Insurance/RE_general.png)
+
 仮想ユーザー・購買商品を用いた動作確認
 
+
+
 ```{r}
-recommend_me(first_item = "Muffin")
+recommend_me(Address = "大阪府", Age = 50, first_item = "Muffin")
 ```
 
 
