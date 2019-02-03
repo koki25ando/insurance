@@ -37,41 +37,44 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 解答
 
-## ファッションアイテムを扱うEC上での購買ログにはどのような特徴が存在するのか？
+## 1. ファッションアイテムを扱うEC上での購買ログにはどのような特性が存在するのか？
 
-1. **年齢や性別と行った個の属性や、ブランドや好みのファッションアイテムのカテゴリなどの履歴によってほぼ全てのユーザーは一定のユーザー群に分類されることができる。**
++ ユーザーごとの属性によって大きく異なる。
++ ユーザーが同時に購買する商品にはパターンが存在する。
 
-2. **ユーザーは当初の目的であった優先順位の高い商品を買ってから、その後に付随して違うアイテムを探す。**
+大きく分けて上記に二点が存在すると考える。
 
-自分はこの問いに対して、普段自分がどのような行動をEC上で行なっているか、ということを想起するところから始めた。自分は通常**一つ以上の目的の商品を思い浮かべてからECを訪れている**。ユーザーの中には、ウィンドーショッピング目的で訪れ、そこで気になった商品があるとクリックして購買するというユーザーも多いであろうが、自分にはそのケースは当てはまらない。そのため、今回の分析レポートの分析対象からはそのようなユーザーを外すことにした。
+### ユーザーごとの属性による購買ログの違い
+
+自分が意味する属性の違いというのは、性別や年齢といった大きなカテゴリーで分類するだけではない。特にファッションECサイトを利用するユーザーは、日本国内だけでも、居住地域の天候や人口構成などによって大きく個人ユーザーが必要としているアイテムも大きく変わると考えられる。中でも自分は「気候」に注目できると考える。南北に長い日本の国土だけ捉えたとしても、北と南では一年間の平均気温には大きな差があるし、西と南では降水量や湿度にも大きく変化が確率が高い。そのため、ファッションEC上の購買ログの特性には大きく居住地(商品の配送先)などが大きなファクターであると考えた。
+
+### 購買商品の組み合わせ
+
+二つ目にあげたファッションECサイト上の購買ログには、ユーザーの購買商品のパターンが大きく関連されていると考えた。当設問の回答を考える際に自分は普段どのようにECサイトを利用しているか、なぜECを利用しているのかを考えた。
+
+自分は通常**一つ以上の目的の商品を思い浮かべてからECを訪れている**。ユーザーの中には、ウィンドーショッピング目的で訪れ、そこで気になった商品があるとクリックして購買するというユーザーも多いであろうが、自分にはそのケースは当てはまらない。そのため、今回の分析レポートの分析対象からはそのようなユーザーを外すことにした。
 
 自分の場合、必ず一つの求めていた商品を見つけた後に、関連商品やその他セール対象になっている商品なども探し、複数個の商品をカートにプールして決済を行う。自分のこのようなEC上での行動経験をもとにファッションアイテムを扱うECで観測される「購買ログ」には以下の特徴が大きくあると考える。
 
-
-ファッションアイテムを扱うEC上での購買ログにはどのような特徴が存在するのか？
-自分はこの問いに対して、普段自分がどのような行動をオンラインショッピングサイトで行なっているか、ということを想起するところから始めた。
 自分は普段、ECサイトを訪れる際に、何か目的を持っている。中には、単なるウィンドーショッピング目的で訪れ、そこで気になった商品があるとクリックして購買するというユーザーも多いであろうが、自分にはそのケースは当てはまらないため、今回の分析レポートの分析対象からは外すとした。
 自分の場合、必ず一つの求めていた商品を見つけた後に、関連商品やその他セール対象になっている商品なども探し、複数個の商品をカートにプールして決済を行う。
 自分のこのようなECサイト上での行動経験をもとに以下の特徴が大きくあると仮定した。
 ユーザーは最も優先順位の高い商品を買うのみではなく、それに関連した商品も探し、同時に決済することが多い。
 以上の仮説をもとに分析レポートを作成していく。
 
-さらにもう一つ特徴を挙げるとするならば、ユーザーの属性においても、大きく購買行動は異なると考えた。
-この二つ目の仮説を確認するためには私はTwitterでファッションというワード含むツイートを抽出して、大まかなユーザーの属性を捉えることをした。
-
-
 ## どんなアルゴリズムが有効か？
 
-1.で説明した特性を利用したレコメンドアルゴリズムを開発し、ECの売上向上を目指します。
-どんなアルゴリズムが有効だと思いますか？アルゴリズムの概要および効果的だと考える理由を説明して下さい。
+アルゴリズムは二つに大きく分類してK平均法クラスタリングという教師無し機械学習と、マーケットバスケット分析(以降MBAと表記する)という伝統的にマーケティングでしようされているアルゴリズムを用いる。
+
+### K平均法クラスター分析
 
 
-この分析を行う上で効果的だと思われた手法はMarket Basket Analysisという手法である。
-この手法をメリットとデメリットを明記し、他に選べたであろう分析手法となぜそれら選ばなかったのかについての理由を提示する。
-そもそもMarket Basket Analysisとは何か？
+
+### MBA
+
 > Market Basket Analysisは商品同士の関連性を明らかにする為に小売大手によって用いられている重要な技術の一つである。主に、商品決済において頻繁に同時に取引される商品の組み合わせを明らかにすることによって当分析手法は効果を発揮する。言うなれば、当手法は顧客が買う商品の関連性を売り手側に
 (筆者日本語訳)
-To put it another way, it allows retailers to identify relationships between the items that people buy.
+> To put it another way, it allows retailers to identify relationships between the items that people buy.
 Association Rules are widely used to analyze retail basket or transaction data, and are intended to identify strong rules discovered in transaction data using measures of interestingness, based on the concept of strong rules.
 [R-bloggers](https://www.r-bloggers.com/a-gentle-introduction-on-market-basket-analysis%E2%80%8A-%E2%80%8Aassociation-rules/)より引用
 
@@ -188,12 +191,12 @@ Probability_df %>%
 商品の購買頻度に大きな散らばりが見受けられる。そのため、今回の分析においては購買頻度が極端に少ない商品は排除する。具体的には、購買回数が5回以下のものは全て除外することにした。
 
 ```{r fig.height=8}
-Probability <- Probability_df %>% 
+Probability <- Probability_df %>%
   filter(Freq > 5) #購入回数が5回以上のみの商品のみを選択する
-Probability %>% 
+Probability %>%
   ggplot(aes(x = Var1, y = (Freq/nrow(transactions_df)), fill = Var1)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
-  coord_flip() + 
+  coord_flip() +
   labs(x = "Item Name", y = "Frequency")
 ```
 
@@ -223,16 +226,16 @@ Result_pro_sup <- function(first_item){
    pro_of_first_item <- Probability %>%
     filter(Var1 == first_item)
    model$Probability_of_First_Item <- pro_of_first_item$Pro
-   
+
    #第二指標Supportを算出する
    support_result <- Support[Support$Var1 %like% first_item, ] %>%
      # mutate(Confidence = Support/Pobability_of_item) %>%
      head(30)
    model$Support <- support_result
-   
+
    Potential_items <- support_result$Var1 %>%
-     str_remove_all(paste0(first_item, ", ")) %>% 
-     str_remove_all(paste0(", ", first_item)) %>% 
+     str_remove_all(paste0(first_item, ", ")) %>%
+     str_remove_all(paste0(", ", first_item)) %>%
      str_remove_all(first_item)
    model$Potentials <- Potential_items
    model
@@ -245,27 +248,27 @@ model <- Result_pro_sup(first_item="Sandwich")
 ```{r}
 recommend_me <- function(first_item){
   model <- Result_pro_sup(first_item)
-  
-   model$Support$Var1 <- model$Support$Var1 %>% 
-    str_remove_all(paste0(first_item, ", ")) %>% 
-    str_remove_all(paste0(", ", first_item)) %>% 
+
+   model$Support$Var1 <- model$Support$Var1 %>%
+    str_remove_all(paste0(first_item, ", ")) %>%
+    str_remove_all(paste0(", ", first_item)) %>%
     str_remove(first_item)
-    Confidence <- model$Support %>% 
-      filter(Var1 != "") %>% 
-      select(Var1, Freq) %>% 
-      mutate(Total = sum(Freq)) %>% 
+    Confidence <- model$Support %>%
+      filter(Var1 != "") %>%
+      select(Var1, Freq) %>%
+      mutate(Total = sum(Freq)) %>%
       group_by(Var1) %>%
       mutate(Sub_Total = sum(Freq),
-             Ratio = Sub_Total/Total) %>% 
-      select(Var1, Ratio) %>% 
+             Ratio = Sub_Total/Total) %>%
+      select(Var1, Ratio) %>%
       ungroup()
-  recommend_df <- Confidence[!duplicated(Confidence$Var1), ] %>% 
+  recommend_df <- Confidence[!duplicated(Confidence$Var1), ] %>%
     arrange(desc(Ratio))
-  
+
   for (i in 1:5){
-    print(paste0(first_item, "を購入した人は", recommend_df[i,]$Var1, "を", 
+    print(paste0(first_item, "を購入した人は", recommend_df[i,]$Var1, "を",
                  round(recommend_df[i,]$Ratio*100, digits = 2), "%の確率で買ってます。"))
-  } 
+  }
 }
 ```
 
@@ -324,4 +327,3 @@ recommend_me(first_item = "Muffin")
 + [Cluster Analysis of Whisky Review Dataset](https://www.kaggle.com/koki25ando/cluster-analysis-of-whisky-reviews-using-k-means)
 + [BARNEY TAN](https://business.sydney.edu.au/staff/barney.tan)
 + [PDF](http://www.jmlr.org/papers/volume12/hahsler11a/hahsler11a.pdf)
-
