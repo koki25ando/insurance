@@ -17,6 +17,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+getwd()
 ```
 
 *1次課題: ファッションECにおけるレコメンドエンジン*
@@ -49,21 +50,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### ユーザーごとの属性による購買ログの違い
 
-自分が意味する属性の違いというのは、性別や年齢といった大きなカテゴリーで分類するだけではない。特にファッションECサイトを利用するユーザーは、日本国内だけでも、居住地域の天候や人口構成などによって大きく個人ユーザーが必要としているアイテムも大きく変わると考えられる。中でも自分は「気候」に注目できると考える。南北に長い日本の国土だけ捉えたとしても、北と南では一年間の平均気温には大きな差があるし、西と南では降水量や湿度にも大きく変化が確率が高い。そのため、ファッションEC上の購買ログの特性には大きく居住地(商品の配送先)などが大きなファクターであると考えた。
+ここで意味する属性の違いというのは、性別や年齢といった大きなカテゴリーで分類するだけではない。特にファッションECサイトを利用するユーザーは、日本国内だけでも、居住地域の天候や人口構成などによって大きく個人ユーザーが必要としているアイテムも大きく変わると考えられる。中でも自分は「気候」に注目できると考える。南北に長い日本の国土だけ捉えたとしても、北と南では一年間の平均気温には大きな差があるし、西と南では降水量や湿度にも大きく変化が確率が高い。そのため、ファッションEC上の購買ログの特性には大きく居住地(商品の配送先)などが大きなファクターであると考えた。
 
 ### 購買商品の組み合わせ
 
-二つ目にあげたファッションECサイト上の購買ログには、ユーザーの購買商品のパターンが大きく関連されていると考えた。当設問の回答を考える際に自分は普段どのようにECサイトを利用しているか、なぜECを利用しているのかを考えた。
+二つ目にあげたファッションECサイト上の購買ログの特性には、ユーザーの購買商品のパターンが大きく関連されていると考えた。当設問の回答を考える際に自分は普段どのようにECサイトを利用しているか、なぜECを利用しているのかを考えた。
 
-自分は通常**一つ以上の目的の商品を思い浮かべてからECを訪れている**。ユーザーの中には、ウィンドーショッピング目的で訪れ、そこで気になった商品があるとクリックして購買するというユーザーも多いであろうが、自分にはそのケースは当てはまらない。そのため、今回の分析レポートの分析対象からはそのようなユーザーを外すことにした。
+自分は通常**一つ以上目当ての商品を思い浮かべてからECサイトを訪れている**。ユーザーの中には、ウィンドーショッピング目的で訪れ、そこで気になった商品があると購買するというユーザーも多数いると考えられるが、自分はそのケースは当てはまらない。そのため、今回の分析レポートの分析対象からはそのようなユーザーを外すことにした。
 
-自分の場合、必ず一つの求めていた商品を見つけた後に、関連商品やその他セール対象になっている商品なども探し、複数個の商品をカートにプールして決済を行う。自分のこのようなEC上での行動経験をもとにファッションアイテムを扱うECで観測される「購買ログ」には以下の特徴が大きくあると考える。
+購買商品のパターンというのは具体的に、特定のブランドを好んで多く買っていたり、メインの商品と共に、靴や手袋といったアクセサリー商品を同時に購買するといったパターンが想像できる。
 
-自分は普段、ECサイトを訪れる際に、何か目的を持っている。中には、単なるウィンドーショッピング目的で訪れ、そこで気になった商品があるとクリックして購買するというユーザーも多いであろうが、自分にはそのケースは当てはまらないため、今回の分析レポートの分析対象からは外すとした。
 自分の場合、必ず一つの求めていた商品を見つけた後に、関連商品やその他セール対象になっている商品なども探し、複数個の商品をカートにプールして決済を行う。
 自分のこのようなECサイト上での行動経験をもとに以下の特徴が大きくあると仮定した。
 ユーザーは最も優先順位の高い商品を買うのみではなく、それに関連した商品も探し、同時に決済することが多い。
-以上の仮説をもとに分析レポートを作成していく。
+
+以上の二点が自分が考えた、ファッションEC上での購買ログの特性である。
 
 ## どんなアルゴリズムが有効か？
 
@@ -71,10 +72,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### K平均法クラスター分析
 
-主に、ユーザーを特徴的なデータで分類するために、クラスタリングを用いる。
-集団の中から、類似点の多いものを集めてクラスターを作成しユーザを分類することができる最も基本的で且つ、汎用的な分析手法のため今回利用する。
-さらに、次ステップの実装においては、居住地域の気候と年齢といういたってシンプルな二次元データを利用するため、今回はクラスタリングが最も効果的であると考えた。
-
+主に、ユーザーを特徴的なデータで分類するために、クラスタリングを用いる。理由としてはクラスター分析は、数あるデータを一つずつ区分してグルーピングする有効なアルゴリズムであるためである。
 
 ### マーケットバスケット分析(MBA)
 
@@ -82,7 +80,7 @@ knitr::opts_chunk$set(echo = TRUE)
 > Market Basket Analysis is one of the key techniques used by large retailers to uncover associations between items. It works by looking for combinations of items that occur together frequently in transactions. To put it another way, it allows retailers to identify relationships between the items that people buy.
 [R-bloggers](https://www.r-bloggers.com/a-gentle-introduction-on-market-basket-analysis%E2%80%8A-%E2%80%8Aassociation-rules/)より引用
 
-以上が、オンライン文献より引用した説明であるが、このレポートではこのマーケットバスケット分析(以降MBAと記述する)手法を用いて、主にどの商品が同時に購入されることが多いか、を発見する。自分が想定したユーザーの購買ログには、一定のパターンがあり、過去の購入商品の組み合わせを分析すれば、一つの商品から同時に購入される確率の高い商品を導くことができ、購入を促せば売り上げ向上に繋げることが可能と考えたため、今回のレコメンドエンジンにはこのアルゴリズムを用いる。
+以上が、オンライン文献より引用した説明であるが、このレポートではこのマーケットバスケット分析(以降MBAと記述する)手法を用いて、主にどの商品が同時に購入されることが多いか、を発見する。このアルゴリズムを利用する理由としては、ユーザーの購買ログから頻出する商品組み合わせを見つけるには非常に効率的であるためである。
 
 ## レコメンドアルゴリズムの実装
 
@@ -214,6 +212,8 @@ head(Support, 30)
 + 組み合わせの頻度
 + 全取引に対しての任意の組合せの割合
 
+以上の三つのデータが含まれている。
+
 ```{r}
 Result_pro_sup <- function(first_item){
   model = list()
@@ -243,23 +243,23 @@ model <- Result_pro_sup(first_item="Sandwich")
 ```{r}
 ### クラスターを判別する関数
 detect_cluster <- function(Address, Age){
-  temperature <- dummy_km10 %>% 
+  temperature <- dummy_km10 %>%
     filter(都道府県 == Address) %>% #インプットされた都道府県を使って、年間平均気温を導く
     select(年平均気温)
   avr_temp <- temperature[1,] #ユーザーの居住地の年間平均気温の変数を作成
-  
-  similar_points <- dummy_km10 %>% 
+
+  similar_points <- dummy_km10 %>%
     filter(年平均気温 > avr_temp-1, 年平均気温 < avr_temp+1, 年齢 > Age-3, 年齢 < Age+3) %>% #年間平均気温+-1,年齢の+-3の幅で抽出
-    select(cluster) 
+    select(cluster)
   cluster_num = names(which.max(table(similar_points))) #クラスターナンバーの最頻値を取得
-  
-  paste0("あなたが属するクラスターは第", cluster_num, "クラスターです。") %>% 
+
+  paste0("あなたが属するクラスターは第", cluster_num, "クラスターです。") %>%
     print()
   plot = dummy_km10 %>%
     ggplot() +
     geom_point(aes(x = 年齢, y = 年平均気温, colour = as.factor(cluster))) +
     # stat_ellipse(show.legend = F) +
-    theme_grey(base_family = "HiraKakuProN-W3") + 
+    theme_grey(base_family = "HiraKakuProN-W3") +
     geom_point(aes(x=Age, y = avr_temp), colour = "red", size = 3) +
     labs(title = "赤い点があなたです。")
   print(plot)
@@ -302,11 +302,13 @@ recommend_me <- function(Address, Age, first_item){
 
 ## レコメンドエンジンの動作確認
 
-概要
+### 概要
 
 ![](/Users/KokiAndo/Desktop/R/R report/Insurance/RE_general.png)
 
-仮想ユーザー・購買商品を用いた動作確認
+上記の図が主なレコメンドエンジンのワークフローである。
+
+以下より、ユーザーの出身地と年齢、購買商品を仮想データとして設定して、レコメンドエンジンの動作確認を行う。
 
 ### 例１
 
@@ -341,14 +343,14 @@ recommend_me(Address = "北海道", Age = 22, first_item = "Coffee")
 recommend_me(Address = "鹿児島県", Age = 35, first_item = "Sandwich")
 ```
 
-### 補足説明
-
-上記では三つのレコメンドエンジン動作の例を提示した。しかし、アウトぷっとの購買商品のおすすめは、
+上記では三つのレコメンドエンジン動作の例を提示した。
 
 # Limitations
 
 + 使用したデータは食品でありさらには、保存が効かない商品についてだった。その為季節性の激しいさらには長持ちする衣類を対象にすると思うような効果を出せない可能性もある。
 + さらには一般的に衣類はブランド品から日用品といったものまで幅広い価格帯の商品が多く、さらには季節性も激しいと思われる。
+
+以上が今回のレコメンドエンジンの問題として考えられることである。
 
 # 改善点
 
@@ -356,36 +358,29 @@ recommend_me(Address = "鹿児島県", Age = 35, first_item = "Sandwich")
 
 ## ユーザークラスタリング
 
-**ゾーニングする際のユーザー属性**
-
 今回はダミーデータを用いたため、居住地の気候と年齢のみを指標に二次元データをクラスタリングした。しかし、最初の自分の解答でも述べたように重要な要素は多数あり、実際にはこのようなシンプルな属性のみでユーザーを区分けし、最適な商品をおすすめすることなどできないであろう。
-そのため、実際のデータはより多くの因子をもとにレコメンド対象者を選別することができ、MBAもより効果的に機能することができるであろう。
+実際のデータはより多くの因子をもとにレコメンド対象者を選別することができ、MBAもより効果的に機能することができるであろう。さらに、今回のレコメンドエンジンでは、ユーザーが属するクラスターまでは判別することができるが、そこから踏み込んだアルゴリズムは組んでいないため、より豊富なデータがあればその点も十分改善されると思われる。
 
 ## MBA分析
 
 今回はダミーデータとして、入手が容易であった食品の購買データを利用した。しかし、根本的に食品とファッションアイテムには違いがある。
-スーパーなどで、食品を一つだけ買って帰ってしまう顧客はそれほど多く無いと推測できるし、逆に、衣類は単品買いということが頻繁に起こっていてもなんら、不思議な点は無いであろう。そのため、
+
++ 商品によっての価格帯が大きく変動するので、ユーザーごとにクラスタリングしたのちに、クラスターごとの購買ログから上述したパターン認識を行い商品をレコメンドするといった手法も実行可能ではありそうである。実際のデータがあれば是非とも挑戦したいと思った。
++ このレポートで用いたように扱う商品が多くなればなるほどなかなか組み合わせというものは見つけづらいかも知れない。その為、サンプルデータで提供されていたような**小カテゴリやブランドといった要因**で同時に購入される商品の組み合わせを発掘して、レコメンドするという方法も可能であると思われる。
++ さらに、ファッションアイテムは季節性が出やすいため、期間ごとの購買ログなどに分けてレコメンドエンジンを実装すると、より精度の高いものを作ることができ、ユーザーの満足度も増やすことができると思われる。
 
 
-+ 商品の価格帯が大きく変動するので、ユーザーごとにクラスタリングしたのちに、クラスターごとの購買ログから上述したパターン認識を行い商品をレコメンドするといった手法も実行可能ではありそう。実際のデータがあれば是非とも挑戦したいと思った。
-+ このレポートで用いたように扱う商品が多くなればなるほどなかなか組み合わせというものは見つけづらいかも知れない。その為、サンプルデータで提供されていたような小カテゴリやブランドといった要因で同時に購入される商品の組み合わせを発掘して、レコメンドするという方法も可能であると思われる。
-
-以上
+以上。
 
 安藤光希
 
-
 # 参考文献リスト
 
++ [Association Mining with R](http://r-statistics.co/Association-Mining-With-R.html)
++ [Association Rules and Market Basket Analysis with R](https://www.r-bloggers.com/association-rules-and-market-basket-analysis-with-r/)
++ [Cluster Analysis of Whisky Review Dataset](https://www.kaggle.com/koki25ando/cluster-analysis-of-whisky-reviews-using-k-means)
++ [Analyzing Interesting Patterns from Large Transaction Data Sets](http://www.jmlr.org/papers/volume12/hahsler11a/hahsler11a.pdf)
 + [STITCH FIX Tech Blog](https://multithreaded.stitchfix.com/blog/)
 + [レコメンドの研究者、Julian McAuleyのサイト](https://cseweb.ucsd.edu/~jmcauley/)
 + [国際会議 ECCV 2018 workshop 採択論文](https://sites.google.com/view/eccvfashion/papers)
 + [国際会議 ICCV 2017 workshop Computer Vision For Fashion](https://sites.google.com/zalando.de/cvf-iccv2017/)
-+ [mhahsler/Arurles](https://github.com/mhahsler/arules)
-+ [MBA by Xavier](https://www.kaggle.com/xvivancos/market-basket-analysis)
-+ [intro](http://r-statistics.co/Association-Mining-With-R.html)
-+ [intro pdf](https://cran.r-project.org/web/packages/arules/vignettes/arules.pdf)
-+ [R-Bloggers](https://www.r-bloggers.com/association-rules-and-market-basket-analysis-with-r/)
-+ [Cluster Analysis of Whisky Review Dataset](https://www.kaggle.com/koki25ando/cluster-analysis-of-whisky-reviews-using-k-means)
-+ [BARNEY TAN](https://business.sydney.edu.au/staff/barney.tan)
-+ [PDF](http://www.jmlr.org/papers/volume12/hahsler11a/hahsler11a.pdf)
