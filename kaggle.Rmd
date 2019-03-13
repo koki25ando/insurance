@@ -1,0 +1,159 @@
+---
+title: "Data Analysis on CareerVillage.org Data"
+author: "Koki Ando"
+date: "3/13/2019"
+output:
+  html_document:
+    code_folding: show
+    highlight: tango
+    theme: cosmo
+    toc: yes
+    toc_depth: 3
+    number_section: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+[DS for Good](https://www.kaggle.com/c/data-science-for-good-careervillage)
+
+# Introduction
+
+## CareerVillage.org
+
+[CareerVillage.org](https://www.careervillage.org/) is a nonprofit that crowdsources career advice for underserved youth. Founded in 2011 in four classrooms in New York City, the platform has now served career advice from 25,000 volunteer professionals to over 3.5M online learners. The platform uses a Q&A style similar to StackOverflow or Quora to provide students with answers to any question about any career.
+
+Mission: **To democratize access to career information and advice**
+
+Our mission is to democratize access to the career advice and guidance underserved youth need to create professional goals and understand their personal paths to those goals. We exist first and foremost to level the playing field.
+
+At [CareerVillage.org](https://www.careervillage.org/) we use crowdsourcing to provide personal career guidance to students at massive scale. We do this through an open access platform that anyone can use to ask a question related to a career. Our web platform matches the career questions students ask to our volunteer corps of over 15,000 working professionals with relevant expertise and a wealth of experiences to share. The advice students get is tailored for them, it’s reliable, and it’s encouraging and inspirational. The more students from different backgrounds use it, the more young people are exposed to careers they may never have dreamed existed.
+
+To truly level the playing field, however, CV provides additional services through partners in communities in which the lack of resources (information, networking, mentoring, etc) is the largest and where students are underrepresented in their desired career, face discrimination in gaining access to their desired career, or face huge hurdles outside their control which block their ability to get into their desired career. We especially work to support youth in low-income communities, students who plan to become the first in their family to attend college, students who are first generation immigrants, young people of color, and young women interested in STEM careers. Working more intensively in communities traditionally lacking the most access reinforces the power of the CV website, enabling the most underserved youth to find new pathways, ask better questions, and forge more connections with peers and mentors using the website.
+
+
+## Research Goal
+
+The goal of this report id **to develop a method to recommend relevant questions to the professionals who are most likely to answer them.**
+
+# Research
+
+## Preparation
+
+```{r warning = FALSE, message = FALSE}
+library(tidyverse)
+library(tidytext)
+library(tm)
+library(wordcloud)
+library(gridExtra)
+
+answers <- read.csv("answers.csv")
+comments <- read.csv("comments.csv")
+emails <- read.csv("emails.csv")
+group_memberships <- read.csv("group_memberships.csv")
+groups <- read.csv("groups.csv")
+matches <- read.csv("matches.csv")
+professionals <- read.csv("professionals.csv")
+questions <- read.csv("questions.csv")
+school_memberships <- read.csv("school_memberships.csv")
+students <- read.csv("students.csv")
+tag_questions <- read.csv("tag_questions.csv")
+tag_users <- read.csv("tag_users.csv")
+tags <- read.csv("tags.csv")
+```
+
+## Email Volume
+
+```{r}
+head(emails)
+frequency_level <- emails %>% 
+  ggplot(aes(emails_frequency_level, fill = emails_frequency_level)) +
+  geom_bar(stat ="count", show.legend = F)
+```
+
+
+To start analyze provided datasets, organizing all the datasets seems to be quite neecssary in this case. Fortunately, ER diagram has been already created in [the kernel by Efim Golovin](https://www.kaggle.com/ioohooi/eda-with-some-insights-data-er-diagram).
+
+To process text data sent by students and professionals, firstly, i am going to organize datasets around "Questions" & "Answers" datasets.
+
+### Questions
+
+```{r message = FALSE}
+questions_sent_by_students <- merge(questions, students, by.x = "questions_author_id", by.y = "students_id",
+      all = FALSE)
+questions_sent_by_professionals <- merge(questions, professionals, by.x = "questions_author_id", by.y = "professionals_id",
+      all = FALSE)
+```
+
+#### Simple wordcloud visualization
+
+```{r warning = FALSE, message = FALSE}
+make_word_cloud <- function(documents) {
+  corpus = tm::Corpus(VectorSource(tolower(documents)))
+  corpus = tm_map(corpus, removePunctuation)
+  corpus = tm_map(corpus, removeWords, stopwords("english"))
+  
+  frequencies = DocumentTermMatrix(corpus)
+  word_frequencies = as.data.frame(as.matrix(frequencies))
+  
+  words <- colnames(word_frequencies)
+  freq <- colSums(word_frequencies)
+  wordcloud::wordcloud(words, freq, max.words =1000,
+            min.freq=sort(freq, decreasing=TRUE)[[400]],
+            colors=RColorBrewer::brewer.pal(8, "Dark2"),
+            random.color=TRUE)  
+}
+```
+
+##### Questions sent by students
+
+```{r warning = FALSE}
+# make_word_cloud(questions_sent_by_students$questions_body[1:50])
+```
+
+##### Questions sent by professionals
+
+```{r warning = FALSE}
+# make_word_cloud(questions_sent_by_students$questions_body[1:50])
+```
+
+As the wordcloud visualizations suggest, there seems to be many highlighted keywords. Although some words such as "College", "School", "Job"... are quite common words, they are too abstract to point out what the respondents genuinely seek. To really inspect what respondants really need, we need to analyze the data deeper!
+
+### Groups users belong to
+
+To discover what king of topics students/Professionals might ask, I am going to take a look at where students/professionals belong to.
+
+```{r fig.width=12, fig.height = 5}
+group_df <- merge(group_memberships, groups, by.x = "group_memberships_group_id", by.y = "groups_id")
+questions_sent_by_students_with_groups <- merge(questions_sent_by_students, group_df, by.x = "questions_author_id", by.y = "group_memberships_user_id") %>% 
+  select(-c("questions_date_added", "students_date_joined"))
+students_groups <- data.frame(table(questions_sent_by_students_with_groups$groups_group_type)) %>% 
+  ggplot(aes(Var1, Freq, fill = Var1, label = Freq)) + 
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  coord_flip() +
+  geom_label(show.legend = FALSE) +
+  labs(x = "", y = "Count", title = "Groups Students belong to")
+questions_sent_by_professionals_with_groups <- merge(questions_sent_by_professionals, group_df, by.x = "questions_author_id", by.y = "group_memberships_user_id") %>%
+  select(-c("questions_date_added", "professionals_date_joined"))
+professionals_groups <- data.frame(table(questions_sent_by_professionals_with_groups$groups_group_type)) %>% 
+  ggplot(aes(Var1, Freq, fill = Var1, label = Freq)) + 
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  coord_flip() +
+  geom_label(show.legend = FALSE) +
+  labs(x = "", y = "Count", title = "Groups Professionals belong to")
+
+grid.arrange(students_groups, professionals_groups, nrow=1)
+```
+
+Ths vis shows that there is huge differences among groups to which users belong. Especcially in the students' dataset, users are distributed mainly in the top 3 groups: "Youth Program", "Cause" and "Professional Network". This might give us key insights, trends or specific preference that are common for those who belong to the same groups.
+
+
+
+**to be continued...**
+
+
+
+
+
